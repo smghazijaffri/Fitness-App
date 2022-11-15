@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/bg"
-    android:background="@color/white"
+    android:background="@color/black"
     tools:context=".MainActivity"
     android:orientation="vertical">
 
@@ -26,10 +26,10 @@
         android:text="WHAT'S YOUR GENDER?"
         android:textStyle="bold"
         android:fontFamily="sans-serif"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="35sp"
         android:layout_gravity="center"
-        android:shadowColor="@color/black"
+        android:shadowColor="@color/white"
         android:shadowDx="1"
         android:shadowDy="1"
         android:shadowRadius="10"
@@ -38,7 +38,8 @@
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="25dp">
+        android:padding="25dp"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -56,21 +57,23 @@
                     android:paddingTop="30dp"
                     android:layout_height="380dp"
                     android:src="@drawable/malemodel"
-                    android:contentDescription="Male Model"/>
+                    android:contentDescription="Male Model"
+                    android:layout_marginBottom="20dp"/>
 
-                <TextView
-                    android:paddingTop="20dp"
+                <RadioButton
+                    android:id="@+id/malebtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Male"
                     android:textStyle="bold"
                     android:fontFamily="sans-serif"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="25sp"
-                    android:shadowColor="@color/black"
+                    android:shadowColor="@color/white"
                     android:shadowDx="1"
                     android:shadowDy="1"
-                    android:shadowRadius="5"/>
+                    android:shadowRadius="5"
+                    android:onClick="onRadioButtonClicked"/>
             </LinearLayout>
 
             <LinearLayout
@@ -87,25 +90,28 @@
                     android:src="@drawable/femalemodel"
                     android:contentDescription="Female Model" />
 
-                <TextView
+                <RadioButton
+                    android:id="@+id/femalebtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="Female"
                     android:textStyle="bold"
                     android:fontFamily="sans-serif"
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="25sp"
-                    android:shadowColor="@color/black"
+                    android:shadowColor="@color/white"
                     android:shadowDx="1"
                     android:shadowDy="1"
-                    android:shadowRadius="5"/>
+                    android:shadowRadius="5"
+                    android:onClick="onRadioButtonClicked"/>
             </LinearLayout>
 
         </LinearLayout>
 
     </HorizontalScrollView>
     <Button
+        android:id="@+id/nextbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -115,5 +121,6 @@
         android:shadowDx="1"
         android:shadowRadius="20"
         android:text="Next"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:enabled="false"/>
 </LinearLayout>

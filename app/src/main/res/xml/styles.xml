@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style name="FlatButton" parent="Theme.AppCompat.Light">
+    <item name="android:textColor">@color/myPeach</item>
+    <item name="colorControlHighlight">@color/myRed</item>
+</style>
