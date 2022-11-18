@@ -2,10 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/bg"
-    android:background="@color/black"
+    android:background="@color/white"
     tools:context=".MainActivity"
     android:orientation="vertical">
 
@@ -15,7 +16,7 @@
         android:layout_height="wrap_content"
         android:max="100"
         android:padding="15dp"
-        android:progress="10"
+        android:progress="12"
         android:layout_gravity="center" />
 
     <TextView
@@ -26,10 +27,10 @@
         android:text="WHAT'S YOUR GENDER?"
         android:textStyle="bold"
         android:fontFamily="sans-serif"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="35sp"
         android:layout_gravity="center"
-        android:shadowColor="@color/white"
+        android:shadowColor="@color/black"
         android:shadowDx="1"
         android:shadowDy="1"
         android:shadowRadius="10"
@@ -53,12 +54,14 @@
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
+                    android:id="@+id/maleimg"
                     android:layout_width="300dp"
                     android:paddingTop="30dp"
                     android:layout_height="380dp"
                     android:src="@drawable/malemodel"
                     android:contentDescription="Male Model"
-                    android:layout_marginBottom="20dp"/>
+                    android:layout_marginBottom="20dp"
+                    android:onClick="onImageClicked"/>
 
                 <RadioButton
                     android:id="@+id/malebtn"
@@ -67,9 +70,9 @@
                     android:text="Male"
                     android:textStyle="bold"
                     android:fontFamily="sans-serif"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="25sp"
-                    android:shadowColor="@color/white"
+                    android:shadowColor="@color/black"
                     android:shadowDx="1"
                     android:shadowDy="1"
                     android:shadowRadius="5"
@@ -84,11 +87,15 @@
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
+                    android:id="@+id/femaleimg"
                     android:layout_width="300dp"
-                    android:layout_height="400dp"
+                    android:layout_height="380dp"
+                    android:paddingTop="30dp"
                     android:layout_marginStart="30dp"
                     android:src="@drawable/femalemodel"
-                    android:contentDescription="Female Model" />
+                    android:layout_marginBottom="20dp"
+                    android:contentDescription="Female Model"
+                    android:onClick="onImageClicked"/>
 
                 <RadioButton
                     android:id="@+id/femalebtn"
@@ -98,9 +105,9 @@
                     android:text="Female"
                     android:textStyle="bold"
                     android:fontFamily="sans-serif"
-                    android:textColor="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="25sp"
-                    android:shadowColor="@color/white"
+                    android:shadowColor="@color/black"
                     android:shadowDx="1"
                     android:shadowDy="1"
                     android:shadowRadius="5"
