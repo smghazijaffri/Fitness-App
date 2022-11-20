@@ -6,7 +6,6 @@ import androidx.cardview.widget.CardView;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RadioButton;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -19,7 +18,7 @@ public class Motivation extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_motivation);
-        Next = (Button) findViewById(R.id.btnmov);
+        Next = findViewById(R.id.btnmov);
         Confident = findViewById(R.id.fc);
         Stress = findViewById(R.id.rs);
         Health = findViewById(R.id.ih);
@@ -27,7 +26,7 @@ public class Motivation extends AppCompatActivity {
         Next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Motivation.this, Motivation.class);
+                Intent intent = new Intent(Motivation.this, PushUp.class);
                 startActivity(intent);
             }
         });

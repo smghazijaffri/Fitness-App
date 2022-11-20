@@ -6,10 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.os.Bundle;
-import android.view.RoundedCorner;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RadioButton;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;

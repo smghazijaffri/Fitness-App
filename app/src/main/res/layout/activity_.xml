@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".focus"
-    android:background="@color/white">
-
+    android:background="@color/white"
+    tools:context=".Activity">
     <ProgressBar
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:max="100"
         android:padding="15dp"
-        android:progress="24"
+        android:progress="72"
         android:layout_gravity="center" />
+
     <TextView
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:paddingTop="20dp"
         android:textAlignment="center"
-        android:text="What is your Area of Focus?"
+        android:text="what's your activity level?"
         android:textStyle="bold|italic"
         android:fontFamily="sans-serif"
         android:textColor="@color/black"
@@ -30,50 +31,54 @@
         android:shadowDx="1"
         android:shadowDy="1"
         android:shadowRadius="10"
-        android:textAllCaps="true"/>
-
+        android:textAllCaps="true"
+        android:layout_marginBottom="30dp"/>
     <LinearLayout
-        android:paddingTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_gravity="center">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sed"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="20dp"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true"
+            android:onClick="onCardClicked"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="👨🏻‍💻"
+                android:textSize="30sp"
+                android:layout_gravity="left|center"
+                android:layout_marginLeft="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Sedentary"
+                android:paddingBottom="1dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/fb"
-            android:layout_width="300dp"
-            android:layout_height="70dp"
-            android:layout_margin="10dp"
-            app:cardCornerRadius="20dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardElevation="10dp"
-            app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true"
-            android:onClick="onCardClicked"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🧍🏻‍♂️"
-                android:textSize="30sp"
-                android:layout_gravity="left|center"
-                android:layout_marginLeft="20dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:text="FULL BODY"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"/>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
-            android:id="@+id/arm"
+            android:id="@+id/light"
             android:layout_width="300dp"
             android:layout_height="70dp"
             android:layout_margin="10dp"
+            android:layout_gravity="center"
             app:cardCornerRadius="20dp"
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
@@ -84,7 +89,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="💪🏻"
+                android:text="🚶🏻‍♂️"
                 android:textSize="30sp"
                 android:layout_gravity="left|center"
                 android:layout_marginLeft="20dp"/>
@@ -94,16 +99,18 @@
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="ARM"
+                android:text="Lightly Active"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
+
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
-            android:id="@+id/chest"
+            android:id="@+id/mod"
             android:layout_width="300dp"
             android:layout_height="70dp"
             android:layout_margin="10dp"
+            android:layout_gravity="center"
             app:cardCornerRadius="20dp"
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
@@ -114,7 +121,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="🏋🏻‍♀️"
+                android:text="🏃🏻‍♂️"
                 android:textSize="30sp"
                 android:layout_gravity="left|center"
                 android:layout_marginLeft="20dp"/>
@@ -124,16 +131,18 @@
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="CHEST"
+                android:text="Moderately Active"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
+
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
-            android:id="@+id/abs"
+            android:id="@+id/active"
             android:layout_width="300dp"
             android:layout_height="70dp"
             android:layout_margin="10dp"
+            android:layout_gravity="center"
             app:cardCornerRadius="20dp"
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
@@ -144,7 +153,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="✊🏻"
+                android:text="🏋🏻‍♂️"
                 android:textSize="30sp"
                 android:layout_gravity="left|center"
                 android:layout_marginLeft="20dp"/>
@@ -154,47 +163,18 @@
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="ABS"
+                android:text="Very Active"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/legs"
-            android:layout_width="300dp"
-            android:layout_height="70dp"
-            android:layout_margin="10dp"
-            app:cardCornerRadius="20dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardElevation="10dp"
-            app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true"
-            android:onClick="onCardClicked"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="🦵🏻"
-                android:textSize="30sp"
-                android:layout_gravity="left|center"
-                android:layout_marginLeft="20dp"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|center_horizontal"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:text="LEGS"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"/>
+
         </androidx.cardview.widget.CardView>
         <Button
-            android:id="@+id/btnfocus"
+            android:id="@+id/btnact"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="70dp"
             android:backgroundTint="#67A800"
             android:shadowColor="@color/black"
             android:shadowDy="1"
@@ -203,7 +183,5 @@
             android:text="Next"
             android:textSize="20sp"
             android:enabled="false"/>
-
     </LinearLayout>
-
 </LinearLayout>

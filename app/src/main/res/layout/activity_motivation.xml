@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     android:background="@color/white"
     tools:context=".Motivation">
     <ProgressBar
@@ -21,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="What Motivates You The Most?"
-        android:textSize="40sp"
+        android:textSize="30sp"
         android:gravity="center"
         android:textStyle="bold|italic"
         android:textColor="@color/black"
@@ -30,14 +29,21 @@
         android:shadowColor="@color/black"
         android:shadowDx="1"
         android:shadowDy="1"
-        android:shadowRadius="10"/>
+        android:shadowRadius="10"
+        android:textAllCaps="true"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center">
         <androidx.cardview.widget.CardView
             android:id="@+id/fc"
             android:layout_width="320dp"
             android:layout_height="70dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             app:cardCornerRadius="20dp"
             app:cardBackgroundColor="@color/white"
             app:cardElevation="20dp"
@@ -69,8 +75,8 @@
         android:id="@+id/rs"
         android:layout_width="320dp"
         android:layout_height="70dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         app:cardCornerRadius="20dp"
         app:cardBackgroundColor="@color/white"
         app:cardElevation="20dp"
@@ -102,8 +108,8 @@
             android:id="@+id/ih"
             android:layout_width="320dp"
             android:layout_height="70dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             app:cardCornerRadius="20dp"
             app:cardBackgroundColor="@color/white"
             app:cardElevation="20dp"
@@ -135,8 +141,8 @@
             android:id="@+id/be"
             android:layout_width="320dp"
             android:layout_height="70dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             app:cardCornerRadius="20dp"
             app:cardBackgroundColor="@color/white"
             app:cardElevation="20dp"
@@ -171,7 +177,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="100dp"
         android:backgroundTint="#67A800"
         android:shadowColor="@color/black"
         android:shadowDy="1"
@@ -180,5 +186,6 @@
         android:text="Next"
         android:textSize="20sp"
         android:enabled="false"/>
+    </LinearLayout>
 
 </LinearLayout>
