@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".Body">
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:padding="15dp"
+        android:progress="96"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:textAlignment="center"
+        android:text="let us know you better"
+        android:textStyle="bold|italic"
+        android:fontFamily="sans-serif"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="10"
+        android:textAllCaps="true"
+        android:layout_marginBottom="30dp" />
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:text="Let us know you better to help boost your workout results"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weight"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_margin="30dp"/>
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:hint="KG"
+            android:textColorHint="@color/black"/>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="150dp"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Height"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_margin="30dp"/>
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:hint="FT IN"
+        android:textColorHint="@color/black"/>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="150dp"
+        android:layout_height="2dp"
+        android:background="#c0c0c0"/>
+    <Button
+        android:id="@+id/btnweek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:backgroundTint="#67A800"
+        android:shadowColor="@color/black"
+        android:shadowDy="1"
+        android:shadowDx="1"
+        android:shadowRadius="20"
+        android:text="Next"
+        android:textSize="20sp"
+        android:enabled="false"/>
+</LinearLayout>
