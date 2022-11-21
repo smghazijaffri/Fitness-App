@@ -26,7 +26,7 @@ public class Weekly extends AppCompatActivity {
         Next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Weekly.this, Weekly.class);
+                Intent intent = new Intent(Weekly.this, Body.class);
                 startActivity(intent);
             }
         });
