@@ -54,11 +54,13 @@
         android:layout_margin="30dp"/>
 
         <EditText
+            android:id="@+id/wei"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
+            android:textColor="@color/black"
             android:hint="KG"
-            android:textColorHint="@color/black"/>
+            android:textColorHint="#696969"/>
     <View
         android:layout_width="wrap_content"
         android:layout_marginLeft="30dp"
@@ -76,11 +78,13 @@
         android:layout_margin="30dp"/>
 
     <EditText
+        android:id="@+id/hei"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:hint="FT IN"
-        android:textColorHint="@color/black"/>
+        android:textColor="@color/black"
+        android:textColorHint="#696969"/>
     <View
         android:layout_width="wrap_content"
         android:layout_marginLeft="30dp"
@@ -88,7 +92,7 @@
         android:layout_height="2dp"
         android:background="#c0c0c0"/>
     <Button
-        android:id="@+id/btnweek"
+        android:id="@+id/btnbod"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
