@@ -1,12 +1,12 @@
 package com.example.fitnessapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 public class Weekly extends AppCompatActivity {
     Button Next;
@@ -26,8 +26,7 @@ public class Weekly extends AppCompatActivity {
         Next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Weekly.this, Body.class);
-                startActivity(intent);
+                startActivity(new Intent(Weekly.this, Body.class));
             }
         });
         One.setOnClickListener(new View.OnClickListener() {

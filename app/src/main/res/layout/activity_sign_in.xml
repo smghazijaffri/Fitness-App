@@ -4,28 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center"
+    android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".Register">
+    tools:context=".SignIn">
+
     <EditText
         android:id="@+id/user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email"
-        android:textColor="@color/black"
         android:layout_margin="20dp"
-        android:textColorHint="@android:color/darker_gray"
-        android:autofillHints="Enter Username"/>
+        android:autofillHints="Enter Email"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        android:textColorHint="#757575" />
+
     <EditText
         android:id="@+id/pass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password"
-        android:textColorHint="@android:color/darker_gray"
         android:layout_margin="20dp"
+        android:autofillHints="Enter Password"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
         android:textColor="@color/black"
-        android:autofillHints="Enter Password"/>
+        android:textColorHint="#757575" />
     <Button
         android:id="@+id/register"
         android:layout_width="wrap_content"
@@ -33,6 +39,13 @@
         android:text="Register"
         android:backgroundTint="@color/white"
         android:layout_margin="20dp"
-        android:textSize="20dp"
+        android:textColor="@color/black" />
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:backgroundTint="@color/white"
+        android:layout_margin="20dp"
         android:textColor="@color/black" />
 </LinearLayout>

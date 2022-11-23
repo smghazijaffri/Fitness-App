@@ -2,16 +2,14 @@ package com.example.fitnessapp;
 
 import static com.example.fitnessapp.R.id.maleimg;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,8 +28,7 @@ public class MainActivity extends AppCompatActivity {
         Next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, focus.class);
-                startActivity(intent);
+                startActivity(new Intent(MainActivity.this, focus.class));
             }
         });
     }
