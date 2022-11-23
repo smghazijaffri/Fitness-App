@@ -12,6 +12,7 @@ public class Body extends AppCompatActivity {
 
     EditText Weight, Height;
     Button Next;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,9 +23,22 @@ public class Body extends AppCompatActivity {
         Next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Body.this, Body.class);
-                startActivity(intent);
+                Enable();
             }
         });
+    }
+    public void Enable(){
+        String Weig = (Weight.getText().toString().trim());
+        String Heig = (Height.getText().toString().trim());
+        if (Weig.isEmpty()){
+            Weight.setError("Field is Empty");
+        }
+        else if (Heig.isEmpty()){
+            Height.setError("Field is Empty");
+        }
+        else {
+            Intent intent = new Intent(Body.this, Body.class);
+            startActivity(intent);
+        }
     }
 }
