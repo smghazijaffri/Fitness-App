@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -35,6 +36,14 @@ public class Body extends AppCompatActivity {
         }
         else if (Heig.isEmpty()){
             Height.setError("Field is Empty");
+        }
+        else if (Integer.parseInt(Weig) <= 40){
+            Weight.setError("Error");
+            Toast.makeText(Body.this,"Weight is too low for any program",Toast.LENGTH_LONG).show();
+        }
+        else if (Integer.parseInt(Heig) < 3 || Integer.parseInt(Weig) > 7){
+            Weight.setError("Error");
+            Toast.makeText(Body.this,"No program available for such height",Toast.LENGTH_LONG).show();
         }
         else {
             startActivity(new Intent(Body.this, SignIn.class));
