@@ -32,8 +32,7 @@
         android:shadowColor="@color/black"
         android:shadowDx="1"
         android:shadowDy="1"
-        android:shadowRadius="10"
-        />
+        android:shadowRadius="10" />
 
     <HorizontalScrollView
         android:layout_width="match_parent"
@@ -62,7 +61,7 @@
                     android:layout_marginBottom="20dp"
                     android:onClick="onImageClicked"/>
 
-                <RadioButton
+                <TextView
                     android:id="@+id/malebtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -75,42 +74,42 @@
                     android:shadowDx="1"
                     android:shadowDy="1"
                     android:shadowRadius="5"
-                    android:onClick="onRadioButtonClicked"/>
+                    />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="356dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:gravity="center"
+                android:orientation="vertical"
                 tools:ignore="UseCompoundDrawables">
 
                 <ImageView
                     android:id="@+id/femaleimg"
                     android:layout_width="300dp"
                     android:layout_height="380dp"
-                    android:paddingTop="30dp"
                     android:layout_marginStart="30dp"
-                    android:src="@drawable/femalemodel"
                     android:layout_marginBottom="20dp"
                     android:contentDescription="Female Model"
-                    android:onClick="onImageClicked"/>
+                    android:onClick="onImageClicked"
+                    android:paddingTop="30dp"
+                    android:src="@drawable/femalemodel" />
 
-                <RadioButton
+                <TextView
                     android:id="@+id/femalebtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="Female"
-                    android:textStyle="bold"
+                    android:layout_marginLeft="15dp"
                     android:fontFamily="sans-serif"
-                    android:textColor="@color/black"
-                    android:textSize="25sp"
+                    android:gravity="center"
                     android:shadowColor="@color/black"
                     android:shadowDx="1"
                     android:shadowDy="1"
                     android:shadowRadius="5"
-                    android:onClick="onRadioButtonClicked"/>
+                    android:text="Female"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
         </LinearLayout>

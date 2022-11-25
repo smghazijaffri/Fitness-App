@@ -7,24 +7,29 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    RadioButton Male, Female;
+    TextView Male, Female;
     Button Next;
     ImageView MaleImg, FemaleImg;
-
+    LinearLayout BG;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Male = (RadioButton) findViewById(R.id.malebtn);
-        Female = (RadioButton) findViewById(R.id.femalebtn);
+        Male = findViewById(R.id.malebtn);
+        Female = findViewById(R.id.femalebtn);
         Next = (Button) findViewById(R.id.nextbtn);
+        MaleImg = findViewById(maleimg);
+        FemaleImg = findViewById(R.id.femaleimg);
+        BG = findViewById(R.id.bg);
         Next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,40 +41,14 @@ public class MainActivity extends AppCompatActivity {
     public void onImageClicked(View view) {
         switch (view.getId()) {
             case maleimg:
-                Female.setChecked(false);
                 Next.setEnabled(true);
+                BG.setBackgroundResource(android.R.color.holo_blue_light);
                 break;
 
             case R.id.femaleimg:
-                Male.setChecked(false);
                 Next.setEnabled(true);
+                BG.setBackgroundResource(android.R.color.holo_red_light);
                 break;
         }
     }
-
-    public void onRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
-
-        // Check which radio button was clicked
-        switch (view.getId()) {
-            case R.id.malebtn:
-                if (checked) {
-                    Female.setChecked(false);
-                    Next.setEnabled(true);
-                    break;
-                } else {
-                    Next.setEnabled(false);
-                }
-
-            case R.id.femalebtn:
-                if (checked) {
-                    Male.setChecked(false);
-                    Next.setEnabled(true);
-                    break;
-                } else {
-                    Next.setEnabled(false);
-                }
-            }
-        }
 }
