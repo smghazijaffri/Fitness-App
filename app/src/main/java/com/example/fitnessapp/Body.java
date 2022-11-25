@@ -39,12 +39,13 @@ public class Body extends AppCompatActivity {
         }
         else if (Integer.parseInt(Weig) <= 40){
             Weight.setError("Error");
-            Toast.makeText(Body.this,"Weight is too low for any program",Toast.LENGTH_LONG).show();
+            Toast.makeText(Body.this,"Weight is too low for any program",Toast.LENGTH_SHORT).show();
         }
-        else if (Integer.parseInt(Heig) < 3 || Integer.parseInt(Weig) > 7){
-            Weight.setError("Error");
-            Toast.makeText(Body.this,"No program available for such height",Toast.LENGTH_LONG).show();
+        else if (Float.parseFloat(Heig) < 3 || Float.parseFloat(Heig) > 7){
+            Height.setError("Error");
+            Toast.makeText(Body.this,"No program available for such height",Toast.LENGTH_SHORT).show();
         }
+
         else {
             startActivity(new Intent(Body.this, SignIn.class));
         }

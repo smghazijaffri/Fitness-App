@@ -17,6 +17,9 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class SignIn extends AppCompatActivity {
     private FirebaseAuth Use;
     EditText Username, Password;
@@ -83,7 +86,7 @@ public class SignIn extends AppCompatActivity {
         else if (Pass.isEmpty()){
             Password.setError("Field Empty");
         }
-        else {
+        else if(isValidPassword(Password.getText().toString().trim())) {
             Use.createUserWithEmailAndPassword(Name, Pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
@@ -97,5 +100,21 @@ public class SignIn extends AppCompatActivity {
                 }
             });
         }
+        else{
+            Toast.makeText(SignIn.this, "Password must contain at least 1 upper case, numeric, and special character", Toast.LENGTH_SHORT).show();
+        }
+    }
+    public boolean isValidPassword(final String password) {
+
+        Pattern pattern;
+        Matcher matcher;
+
+        final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{4,}$";
+
+        pattern = Pattern.compile(PASSWORD_PATTERN);
+        matcher = pattern.matcher(password);
+
+        return matcher.matches();
+
     }
 }
