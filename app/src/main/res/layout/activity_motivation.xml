@@ -50,12 +50,13 @@
             app:cardMaxElevation="12dp"
             app:cardPreventCornerOverlap="true"
             >
-           <ImageView
-               android:layout_width="wrap_content"
-               android:layout_height="50dp"
-               android:layout_marginTop="8dp"
-               android:src="@drawable/confident"
-               android:layout_marginRight="230dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="😄"
+                android:textSize="30sp"
+                android:layout_gravity="left|center"
+                android:layout_marginLeft="20dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -83,12 +84,13 @@
         app:cardMaxElevation="12dp"
         app:cardPreventCornerOverlap="true"
         >
-        <ImageView
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="65dp"
-            android:layout_marginTop="8dp"
-            android:src="@drawable/stress"
-            android:layout_marginRight="230dp"/>
+            android:layout_height="wrap_content"
+            android:text="🎈"
+            android:textSize="30sp"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="20dp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -116,12 +118,13 @@
             app:cardMaxElevation="12dp"
             app:cardPreventCornerOverlap="true"
             >
-            <ImageView
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="65dp"
-                android:layout_marginTop="6dp"
-                android:src="@drawable/healthy"
-                android:layout_marginRight="230dp"/>
+                android:layout_height="wrap_content"
+                android:text="🤸‍♂️"
+                android:textSize="30sp"
+                android:layout_gravity="left|center"
+                android:layout_marginLeft="20dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -149,12 +152,13 @@
             app:cardMaxElevation="12dp"
             app:cardPreventCornerOverlap="true"
             >
-            <ImageView
+            <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="62dp"
-                android:layout_marginTop="6dp"
-                android:src="@drawable/enenrgy"
-                android:layout_marginRight="230dp"/>
+                android:layout_height="wrap_content"
+                android:text="🤩"
+                android:textSize="30sp"
+                android:layout_gravity="left|center"
+                android:layout_marginLeft="20dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
