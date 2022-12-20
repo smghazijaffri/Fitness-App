@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@color/white">
 <LinearLayout
     android:layout_width="match_parent"
@@ -133,7 +134,6 @@
         app:cardMaxElevation="12dp"
         app:cardPreventCornerOverlap="true">
         <ImageView
-
             android:layout_width="fill_parent"
             android:layout_height="90dp"
             android:scaleType="fitXY"
@@ -146,7 +146,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginTop="20dp"
             android:layout_marginStart="15dp"
-            android:text="lower Body"/>
+            android:text="Lower Body"/>
 
     </androidx.cardview.widget.CardView>
     <TextView
