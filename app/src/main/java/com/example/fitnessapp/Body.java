@@ -45,7 +45,6 @@ public class Body extends AppCompatActivity {
             Height.setError("Error");
             Toast.makeText(Body.this,"No program available for such height",Toast.LENGTH_SHORT).show();
         }
-
         else {
             startActivity(new Intent(Body.this, SignIn.class));
         }

@@ -9,14 +9,12 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@color/white"
-        tools:context=".fullbody"
-        >
+        tools:context=".fullbody">
 
         <androidx.cardview.widget.CardView
-
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_margin="10dp"
@@ -33,7 +31,7 @@
             android:text="FULL BODY"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:textSize="25dp"></TextView>
+            android:textSize="25sp"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,8 +39,8 @@
             android:padding="2dp"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:textSize="20dp"
-            android:layout_marginTop="28dp"></TextView>
+            android:textSize="20sp"
+            android:layout_marginTop="28dp"/>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:id="@+id/jumpcard"
@@ -54,8 +52,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true"
-            android:onClick="onCardClicked">
+            app:cardPreventCornerOverlap="true">
 
             <VideoView
                 android:id="@+id/jump"
@@ -93,8 +90,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true"
-            android:onClick="onCardClicked">
+            app:cardPreventCornerOverlap="true">
 
             <VideoView
                 android:id="@+id/inpush"
@@ -133,8 +129,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true"
-            android:onClick="onCardClicked">
+            app:cardPreventCornerOverlap="true">
 
             <VideoView
                 android:id="@+id/kneepush"
@@ -173,8 +168,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true"
-            android:onClick="onCardClicked">
+            app:cardPreventCornerOverlap="true">
 
             <VideoView
                 android:id="@+id/push"
@@ -213,8 +207,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true"
-            android:onClick="onCardClicked">
+            app:cardPreventCornerOverlap="true">
 
             <VideoView
                 android:id="@+id/widepush"
@@ -254,8 +247,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true"
-            android:onClick="onCardClicked">
+            app:cardPreventCornerOverlap="true">
 
             <VideoView
                 android:id="@+id/inpush2"
@@ -275,6 +267,7 @@
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -294,8 +287,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true"
-            android:onClick="onCardClicked">
+            app:cardPreventCornerOverlap="true">
 
             <VideoView
                 android:id="@+id/kneepush2"
@@ -334,8 +326,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true"
-            android:onClick="onCardClicked">
+            app:cardPreventCornerOverlap="true">
 
             <VideoView
                 android:id="@+id/push2"
@@ -374,8 +365,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true"
-            android:onClick="onCardClicked">
+            app:cardPreventCornerOverlap="true">
 
             <VideoView
                 android:id="@+id/widepush2"
@@ -416,8 +406,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true"
-            android:onClick="onCardClicked">
+            app:cardPreventCornerOverlap="true">
 
             <VideoView
                 android:id="@+id/cobra"

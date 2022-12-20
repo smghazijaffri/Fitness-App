@@ -11,7 +11,6 @@ import android.widget.VideoView;
 public class fullbody extends AppCompatActivity {
 VideoView vid , vid2, vid3, vid4, vid5, vid6,vid7, vid8, vid9, vid10;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
