@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white">
+    android:background="@color/white"
+    tools:context=".home">
+
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -257,7 +259,7 @@
 
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
-
+        android:id="@+id/lbegin"
         android:layout_width="300dp"
         android:layout_height="80dp"
         android:layout_margin="10dp"

@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class home extends AppCompatActivity {
-    CardView FBody, LBody, ABegin, CBegin, ArmBegin;
+    CardView FBody, LBody, ABegin, CBegin, ArmBegin, LBegin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +18,7 @@ public class home extends AppCompatActivity {
         ABegin = findViewById(R.id.absbegin);
         CBegin = findViewById(R.id.chestbegin);
         ArmBegin = findViewById(R.id.armbegin);
+        LBegin = findViewById(R.id.lbegin);
 
         FBody.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +49,10 @@ public class home extends AppCompatActivity {
             public void onClick(View v) {
                 startActivity(new Intent(home.this, armbeginner.class));
             }
+        });
+        LBegin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { startActivity(new Intent(home.this, legsbeginner.class)); }
         });
     }
 }
