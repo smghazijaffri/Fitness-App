@@ -159,7 +159,7 @@
         android:layout_marginBottom="25dp"
         android:layout_marginStart="35dp"/>
     <androidx.cardview.widget.CardView
-
+        android:id="@+id/absbegin"
         android:layout_width="300dp"
         android:layout_height="80dp"
         android:layout_margin="10dp"
@@ -190,7 +190,7 @@
 
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
-
+        android:id="@+id/chestbegin"
         android:layout_width="300dp"
         android:layout_height="80dp"
         android:layout_margin="10dp"
@@ -223,7 +223,7 @@
 
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
-
+        android:id="@+id/armbegin"
         android:layout_width="300dp"
         android:layout_height="80dp"
         android:layout_margin="10dp"
