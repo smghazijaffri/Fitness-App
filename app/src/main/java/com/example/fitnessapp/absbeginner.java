@@ -14,7 +14,7 @@ public class absbeginner extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_absbeginner);
         String path = "android.resource://"+ getPackageName() +"/"+R.raw.jumpingjack;
-        /*String path2 = "android.resource://"+ getPackageName() +"/"+R.raw.abdominalcrunches;*/
+        String path2 = "android.resource://"+ getPackageName() +"/"+R.raw.jumpingjack;
         String path3 = "android.resource://"+ getPackageName() +"/"+R.raw.russiantwist;
         String path4 = "android.resource://"+ getPackageName() +"/"+R.raw.mountainclimber;
         String path5 = "android.resource://"+ getPackageName() +"/"+R.raw.legraises;
@@ -33,18 +33,18 @@ public class absbeginner extends AppCompatActivity {
 
 
         Uri uri = Uri.parse(path);
-        /*Uri uri2 = Uri.parse(path2);*/
+        Uri uri2 = Uri.parse(path2);
         Uri uri3 = Uri.parse(path3);
         Uri uri4 = Uri.parse(path4);
         Uri uri5 = Uri.parse(path5);
         Uri uri6 = Uri.parse(path6);
 
         vid.setVideoURI(uri);
-        /*vid2.setVideoURI(uri2);*/
+        vid2.setVideoURI(uri2);
         vid3.setVideoURI(uri3);
         vid4.setVideoURI(uri4);
         vid5.setVideoURI(uri5);
-        /*vid6.setVideoURI(uri2);*/
+        vid6.setVideoURI(uri2);
         vid7.setVideoURI(uri3);
         vid8.setVideoURI(uri4);
         vid9.setVideoURI(uri5);

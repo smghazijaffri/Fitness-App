@@ -35,7 +35,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="FULL BODY"
+                android:text="CHEST BEGINNER"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:layout_gravity="center|center_horizontal"

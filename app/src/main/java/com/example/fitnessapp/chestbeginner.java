@@ -28,7 +28,7 @@ public class chestbeginner extends AppCompatActivity {
         vid5 = findViewById(R.id.kneepush);
         vid6 = findViewById(R.id.cobra);
         vid7 = findViewById(R.id.inpush2);
-        vid7 = findViewById(R.id.tricepdips);
+        vid8 = findViewById(R.id.tricepdips);
         vid9 = findViewById(R.id.widepush2);
         vid10 = findViewById(R.id.tricepdips2);
 
