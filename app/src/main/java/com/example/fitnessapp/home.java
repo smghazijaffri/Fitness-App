@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class home extends AppCompatActivity {
-    CardView FBody, LBody, ABegin, CBegin, ArmBegin, LBegin;
+    CardView FBody, LBody, ABegin, CBegin, ArmBegin, LBegin, SBegin, AbsInter, ChestInter, ArmInter, LegsInter, ShoulderInter, AbsAdv, ChestAdv, ArmAdv, LegsAdv, ShoulderAdv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +19,9 @@ public class home extends AppCompatActivity {
         CBegin = findViewById(R.id.chestbegin);
         ArmBegin = findViewById(R.id.armbegin);
         LBegin = findViewById(R.id.lbegin);
+        SBegin = findViewById(R.id.shoulderbegin);
+        AbsInter = findViewById(R.id.absinter);
+        ChestInter = findViewById(R.id.chestinter);
 
         FBody.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +56,18 @@ public class home extends AppCompatActivity {
         LBegin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { startActivity(new Intent(home.this, legsbeginner.class)); }
+        });
+        SBegin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { startActivity(new Intent(home.this, shoulderbeginner.class)); }
+        });
+        AbsInter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { startActivity(new Intent(home.this, absintermediate.class)); }
+        });
+        ChestInter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { startActivity(new Intent(home.this, chestintermediate.class)); }
         });
     }
 }
