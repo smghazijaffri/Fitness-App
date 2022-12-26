@@ -270,8 +270,8 @@
                 android:layout_marginBottom="20dp"
                 android:text="Side-lying Floor Stretch Left"
                 android:paddingBottom="1dp"
-                android:textSize="20sp"
-                android:layout_marginStart="40dp"
+                android:textSize="18sp"
+                android:layout_marginStart="50dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
 
@@ -312,9 +312,9 @@
                 android:layout_marginBottom="20dp"
                 android:text="Side-Lying Floor Stretch Right"
                 android:paddingBottom="1dp"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:textStyle="bold"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="50dp"
                 android:textColor="@color/black"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -432,9 +432,10 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:text="Prone Triceps Push Ups"
-                android:paddingLeft="30dp"
+                android:paddingLeft="20dp"
                 android:paddingBottom="1dp"
-                android:textSize="20sp"
+                android:layout_marginStart="30dp"
+                android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
             <TextView
@@ -472,8 +473,9 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:text="Reclined Triceps Push Ups"
-                android:paddingLeft="45dp"
+                android:paddingLeft="40dp"
                 android:paddingBottom="1dp"
+                android:layout_marginStart="50dp"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
