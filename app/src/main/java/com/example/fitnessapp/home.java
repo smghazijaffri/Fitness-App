@@ -23,6 +23,13 @@ public class home extends AppCompatActivity {
         AbsInter = findViewById(R.id.absinter);
         ChestInter = findViewById(R.id.chestinter);
         ArmInter = findViewById(R.id.armintermediate);
+        LegsInter = findViewById(R.id.legintermediate);
+        ShoulderInter = findViewById(R.id.shoulderinter);
+        AbsAdv = findViewById(R.id.absadv);
+        ChestAdv = findViewById(R.id.chestadv);
+        ArmAdv = findViewById(R.id.armadv);
+        LegsAdv = findViewById(R.id.legsadv);
+        ShoulderAdv = findViewById(R.id.shoulderadv);
 
         FBody.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,6 +80,34 @@ public class home extends AppCompatActivity {
         ArmInter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { startActivity(new Intent(home.this, armintermediate.class)); }
+        });
+        LegsInter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { startActivity(new Intent(home.this, LegIntermediate.class)); }
+        });
+        ShoulderInter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { startActivity(new Intent(home.this, ShoulderIntermediate.class)); }
+        });
+        AbsAdv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { startActivity(new Intent(home.this, absAdvanced.class)); }
+        });
+        ChestAdv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { startActivity(new Intent(home.this, chestAdvanced.class)); }
+        });
+        ArmAdv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { startActivity(new Intent(home.this, armAdvanced.class)); }
+        });
+        LegsAdv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { startActivity(new Intent(home.this, legAdvanced.class)); }
+        });
+        ShoulderAdv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { startActivity(new Intent(home.this, ShoulderAdvanced.class)); }
         });
     }
 }

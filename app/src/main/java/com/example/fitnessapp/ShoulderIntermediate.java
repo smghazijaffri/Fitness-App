@@ -9,6 +9,6 @@ public class ShoulderIntermediate extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shoulder_intermediate);
+        setContentView(R.layout.activity_shoulderintermediate);
     }
 }

@@ -9,6 +9,6 @@ public class ShoulderAdvanced extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shoulder_advanced);
+        setContentView(R.layout.activity_shoulderadvanced);
     }
 }

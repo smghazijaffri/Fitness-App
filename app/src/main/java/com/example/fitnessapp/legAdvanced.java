@@ -9,6 +9,6 @@ public class legAdvanced extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_leg_advanced);
+        setContentView(R.layout.activity_legadvanced);
     }
 }
