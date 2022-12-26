@@ -22,6 +22,7 @@ public class home extends AppCompatActivity {
         SBegin = findViewById(R.id.shoulderbegin);
         AbsInter = findViewById(R.id.absinter);
         ChestInter = findViewById(R.id.chestinter);
+        ArmInter = findViewById(R.id.armintermediate);
 
         FBody.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +69,10 @@ public class home extends AppCompatActivity {
         ChestInter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { startActivity(new Intent(home.this, chestintermediate.class)); }
+        });
+        ArmInter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { startActivity(new Intent(home.this, armintermediate.class)); }
         });
     }
 }
