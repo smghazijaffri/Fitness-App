@@ -65,17 +65,17 @@
                 android:layout_gravity="center|center_horizontal"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:paddingBottom="1dp"
+                android:paddingBottom="2dp"
                 android:text="Jumping Jacks"
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 app:cardBackgroundColor="@color/white" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="00:30"
-                android:textSize="18dp"
+                android:textSize="12dp"
                 android:textColor="#FF8A80"
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_margin="5dp"/>
@@ -107,16 +107,16 @@
                 android:layout_gravity="center|center_horizontal"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:paddingBottom="1dp"
+                android:paddingBottom="2dp"
                 android:text="Arm Raises"
                 android:textColor="@color/black"
-                android:textSize="23sp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="00:16"
-                android:textSize="18dp"
+                android:textSize="12dp"
                 android:textColor="#FF8A80"
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_margin="5dp"/>
@@ -147,16 +147,16 @@
                 android:layout_gravity="center|center_horizontal"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
+                android:paddingBottom="2dp"
                 android:text="Rhomboid Pulls"
-                android:paddingBottom="1dp"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="x14"
-                android:textSize="18dp"
+                android:textSize="15dp"
                 android:textColor="#FF8A80"
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_margin="5dp"/>
@@ -188,16 +188,16 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:text="Side Arm Raise"
-                android:paddingBottom="1dp"
-                android:textSize="20sp"
-                android:layout_marginStart="20dp"
+                android:paddingBottom="2dp"
+                android:textSize="15sp"
+                android:layout_marginStart="5dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="00:16"
-                android:textSize="18dp"
+                android:textSize="12dp"
                 android:textColor="#FF8A80"
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_margin="5dp"/>
@@ -227,18 +227,18 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center|center_horizontal"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="25dp"
+                android:layout_marginBottom="20dp"
                 android:text="Knee Push-ups"
                 android:paddingBottom="2dp"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:textStyle="bold"
-                android:layout_marginStart="2dp"
+                android:layout_marginStart="1dp"
                 android:textColor="@color/black"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="x14"
-                android:textSize="18dp"
+                android:textSize="15dp"
                 android:textColor="#FF8A80"
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_margin="5dp"/>
@@ -269,9 +269,9 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:text="Side-lying Floor Stretch Left"
-                android:paddingBottom="1dp"
-                android:textSize="18sp"
-                android:layout_marginStart="50dp"
+                android:paddingBottom="2dp"
+                android:textSize="15sp"
+                android:layout_marginStart="30dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
 
@@ -279,7 +279,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="00:30"
-                android:textSize="18dp"
+                android:textSize="12dp"
                 android:textColor="#FF8A80"
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_margin="5dp"/>
@@ -311,8 +311,8 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:text="Side-Lying Floor Stretch Right"
-                android:paddingBottom="1dp"
-                android:textSize="18sp"
+                android:paddingBottom="2dp"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 android:layout_marginStart="50dp"
                 android:textColor="@color/black"/>
@@ -320,7 +320,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="00:30"
-                android:textSize="18dp"
+                android:textSize="12dp"
                 android:textColor="#FF8A80"
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_margin="5dp"/>
@@ -352,16 +352,16 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:text="Arm Scissors"
-                android:layout_marginStart="10dp"
-                android:paddingBottom="1dp"
-                android:textSize="20sp"
+                android:layout_marginStart="0dp"
+                android:paddingBottom="2dp"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="00:30"
-                android:textSize="18dp"
+                android:textSize="12dp"
                 android:textColor="#FF8A80"
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_margin="5dp"/>
@@ -391,15 +391,15 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:text="Cat Cow Pose"
-                android:paddingBottom="1dp"
-                android:textSize="20sp"
+                android:paddingBottom="2dp"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="00:30"
-                android:textSize="18dp"
+                android:textSize="12dp"
                 android:textColor="#FF8A80"
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_margin="5dp"/>
@@ -432,17 +432,16 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:text="Prone Triceps Push Ups"
-                android:paddingLeft="20dp"
-                android:paddingBottom="1dp"
-                android:layout_marginStart="30dp"
-                android:textSize="18sp"
+                android:paddingBottom="2dp"
+                android:layout_marginStart="20dp"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="x14"
-                android:textSize="18dp"
+                android:textSize="12dp"
                 android:textColor="#FF8A80"
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_margin="5dp"/>
@@ -473,10 +472,9 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:text="Reclined Triceps Push Ups"
-                android:paddingLeft="40dp"
-                android:paddingBottom="1dp"
-                android:layout_marginStart="50dp"
-                android:textSize="20sp"
+                android:paddingBottom="2dp"
+                android:layout_marginStart="20dp"
+                android:textSize="15sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
 
@@ -484,7 +482,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="x12"
-                android:textSize="18dp"
+                android:textSize="12dp"
                 android:textColor="#FF8A80"
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_margin="5dp"/>
@@ -516,10 +514,10 @@
                 android:layout_gravity="center|center_horizontal"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:paddingBottom="1dp"
+                android:paddingBottom="2dp"
                 android:text="Child's Pose"
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -529,7 +527,7 @@
                 android:layout_margin="5dp"
                 android:text="00:30"
                 android:textColor="#FF8A80"
-                android:textSize="18dp" />
+                android:textSize="12dp" />
 
         </androidx.cardview.widget.CardView>
     </LinearLayout>
