@@ -291,7 +291,7 @@
 
 
     </androidx.cardview.widget.CardView><androidx.cardview.widget.CardView
-
+    android:id="@+id/shoulderbegin"
     android:layout_width="300dp"
     android:layout_height="80dp"
     android:layout_margin="10dp"
@@ -334,7 +334,7 @@
     android:layout_marginStart="35dp"/>
 
     <androidx.cardview.widget.CardView
-
+        android:id="@+id/absinter"
         android:layout_width="300dp"
         android:layout_height="80dp"
         android:layout_margin="10dp"
@@ -365,7 +365,7 @@
 
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
-
+        android:id="@+id/chestinter"
         android:layout_width="300dp"
         android:layout_height="80dp"
         android:layout_margin="10dp"
@@ -397,7 +397,7 @@
 
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
-
+        android:id="@+id/armintermediate"
         android:layout_width="300dp"
         android:layout_height="80dp"
         android:layout_margin="10dp"
@@ -430,7 +430,7 @@
 
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
-
+        android:id="@+id/legintermediate"
         android:layout_width="300dp"
         android:layout_height="80dp"
         android:layout_margin="10dp"
@@ -459,38 +459,38 @@
 
 
     </androidx.cardview.widget.CardView><androidx.cardview.widget.CardView
-
-    android:layout_width="300dp"
-    android:layout_height="80dp"
-    android:layout_margin="10dp"
-    android:layout_gravity="center"
-    android:layout_marginTop="20dp"
-    app:cardBackgroundColor="@color/white"
-    app:cardElevation="10dp"
-    app:cardMaxElevation="12dp"
-    app:cardPreventCornerOverlap="true">
-    <ImageView
-
-        android:layout_width="fill_parent"
-        android:layout_height="100dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/shouandbackint" />
-
-    <TextView
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:id="@+id/shoulderinter"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="15dp"
-        android:text="SHOULDER AND BACK INTERMIDIATE"
-        android:textColor="@color/white"
-        android:fontFamily="sans-serif"
-        android:textSize="15sp"
-        android:textStyle="bold"/>
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true">
+        <ImageView
+
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/shouandbackint" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+            android:text="SHOULDER AND BACK INTERMIDIATE"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
 
 
-</androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -501,7 +501,7 @@
         android:textStyle="bold"
         android:layout_marginStart="35dp"/>
     <androidx.cardview.widget.CardView
-
+        android:id="@+id/absadv"
         android:layout_width="300dp"
         android:layout_height="80dp"
         android:layout_margin="10dp"
@@ -533,7 +533,7 @@
 
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
-
+        android:id="@+id/chestadv"
         android:layout_width="300dp"
         android:layout_height="80dp"
         android:layout_margin="10dp"
@@ -567,7 +567,7 @@
 
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
-
+        android:id="@+id/armadv"
         android:layout_width="300dp"
         android:layout_height="80dp"
         android:layout_margin="10dp"
@@ -599,7 +599,7 @@
 
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
-
+        android:id="@+id/legsadv"
         android:layout_width="300dp"
         android:layout_height="80dp"
         android:layout_margin="10dp"
@@ -630,37 +630,36 @@
 
 
     </androidx.cardview.widget.CardView><androidx.cardview.widget.CardView
-
-    android:layout_width="300dp"
-    android:layout_height="80dp"
-    android:layout_margin="10dp"
-    android:layout_gravity="center"
-    android:layout_marginTop="20dp"
-    app:cardBackgroundColor="@color/white"
-    app:cardElevation="10dp"
-    app:cardMaxElevation="12dp"
-    app:cardPreventCornerOverlap="true">
-    <ImageView
-        android:layout_width="fill_parent"
-        android:layout_height="100dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/shouandbackadv" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:id="@+id/shoulderadv"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
+        android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="15dp"
-        android:text="SHOULDER AND BACK ADVANCED"
-        android:textColor="@color/white"
-        android:fontFamily="sans-serif"
-        android:textSize="15sp"
-        android:textStyle="bold" />
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true">
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/shouandbackadv" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="15dp"
+            android:text="SHOULDER AND BACK ADVANCED"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
-</androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
-</LinearLayout>
+    </LinearLayout>
 </ScrollView>
 
