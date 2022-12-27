@@ -6,9 +6,10 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 public class home extends AppCompatActivity {
-    CardView FBody, LBody, ABegin, CBegin, ArmBegin, LBegin, SBegin, AbsInter, ChestInter, ArmInter, LegsInter, ShoulderInter, AbsAdv, ChestAdv, ArmAdv, LegsAdv, ShoulderAdv;
+    CardView FBody, LBody, ABegin, CBegin, ArmBegin, LBegin, SBegin, AbsInter, ChestInter, ArmInter, LegsInter, ShoulderInter, AbsAdv, ChestAdv, ArmAdv, LegsAdv, ShoulderAdv, Pedometer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +31,7 @@ public class home extends AppCompatActivity {
         ArmAdv = findViewById(R.id.armadv);
         LegsAdv = findViewById(R.id.legsadv);
         ShoulderAdv = findViewById(R.id.shoulderadv);
+        Pedometer = findViewById(R.id.Pedo);
 
         FBody.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,6 +110,10 @@ public class home extends AppCompatActivity {
         ShoulderAdv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { startActivity(new Intent(home.this, ShoulderAdvanced.class)); }
+        });
+        Pedometer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { startActivity(new Intent(home.this, Pedometer.class)); }
         });
     }
 }

@@ -15,7 +15,7 @@ public class absintermediate extends AppCompatActivity {
         setContentView(R.layout.activity_absintermediate);
 
         String path = "android.resource://"+ getPackageName() +"/"+R.raw.jumpingjack;
-        String path2 = "android.resource://"+ getPackageName() +"/"+R.raw.jumpingjack;
+        String path2 = "android.resource://"+ getPackageName() +"/"+R.raw.abdominalcrunches;
         String path3 = "android.resource://"+ getPackageName() +"/"+R.raw.russiantwist;
         String path4 = "android.resource://"+ getPackageName() +"/"+R.raw.mountainclimber;
         String path5 = "android.resource://"+ getPackageName() +"/"+R.raw.legraises;

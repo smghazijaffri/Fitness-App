@@ -14,7 +14,7 @@ public class absbeginner extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_absbeginner);
         String path = "android.resource://"+ getPackageName() +"/"+R.raw.jumpingjack;
-        String path2 = "android.resource://"+ getPackageName() +"/"+R.raw.jumpingjack;
+        String path2 = "android.resource://"+ getPackageName() +"/"+R.raw.abdominalcrunches;
         String path3 = "android.resource://"+ getPackageName() +"/"+R.raw.russiantwist;
         String path4 = "android.resource://"+ getPackageName() +"/"+R.raw.mountainclimber;
         String path5 = "android.resource://"+ getPackageName() +"/"+R.raw.legraises;
@@ -121,6 +121,5 @@ public class absbeginner extends AppCompatActivity {
         vid8.start();
         vid9.start();
         vid10.start();
-
     }
 }
