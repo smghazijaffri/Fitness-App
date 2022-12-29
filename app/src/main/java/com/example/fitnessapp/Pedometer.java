@@ -1,11 +1,13 @@
 package com.example.fitnessapp;
 
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -17,6 +19,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Locale;
 
@@ -26,13 +29,14 @@ public class Pedometer extends AppCompatActivity implements SensorEventListener 
     // Is the stopwatch running?
     private boolean running;
     private boolean wasRunning;
-    Button button1, button2;
-    private TextView textViewStepDetector;
+    Button button1, button2, button3, button4;
+    private TextView textViewStepDetector, Timer;
     private SensorManager sensorManager;
     private Sensor mStepDetector;
     private Sensor stepDetectorSensor;
     private Sensor accelerometer;
     int stepDetected = 0;
+    DatabaseHelper helper;
 
     @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
@@ -67,6 +71,10 @@ public class Pedometer extends AppCompatActivity implements SensorEventListener 
         textViewStepDetector = findViewById(R.id.step_detector);
         button1 = findViewById(R.id.btn1);
         button2 = findViewById(R.id.btn2);
+        button3 = findViewById(R.id.btn3);
+        button4 = findViewById(R.id.btn4);
+        Timer = findViewById(R.id.time_view);
+        helper = new DatabaseHelper(Pedometer.this);
 
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         stepDetectorSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_DETECTOR);
@@ -78,6 +86,7 @@ public class Pedometer extends AppCompatActivity implements SensorEventListener 
         else{
             textViewStepDetector.setText("not presented");
         }
+        onPause();
 
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,6 +102,47 @@ public class Pedometer extends AppCompatActivity implements SensorEventListener 
                 running = true;
             }
         });
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int step, date;
+                String time;
+                step = Integer.parseInt(textViewStepDetector.getText().toString().trim());
+                time = (Timer.getText().toString().trim());
+                /*date = today.trim();*/
+
+                if (step <= 0){
+                    Toast.makeText(Pedometer.this, "No steps to register", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    onPause();
+                    textViewStepDetector.setText("0");
+                    helper.InsertSteps(time, step);
+                    finish();
+                    startActivity(getIntent());
+                }
+            }
+        });
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GetAllData();
+            }
+        });
+    }
+
+    public void GetAllData() {
+        String data = "";
+        Cursor cursor = helper.GetDataCursor();
+        while (cursor.moveToNext()) {
+            data = data + "Duration: " + cursor.getString(1) + " ";
+            data = data + "Steps: " + cursor.getString(2) + "\n";
+
+        }
+        AlertDialog.Builder build = new AlertDialog.Builder(Pedometer.this);
+        build.setTitle("All Data");
+        build.setMessage(data);
+        build.show();
     }
 
     public void onSaveInstanceState(Bundle savedInstanceState) {

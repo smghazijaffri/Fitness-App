@@ -63,6 +63,26 @@
             android:layout_margin="10dp"
             android:textColor="@color/black"/>
 
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="End"
+            android:backgroundTint="@color/white"
+            android:elevation="10dp"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"/>
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show"
+        android:backgroundTint="@color/white"
+        android:elevation="10dp"
+        android:layout_margin="10dp"
+        android:textColor="@color/black"/>
 
 </LinearLayout>
