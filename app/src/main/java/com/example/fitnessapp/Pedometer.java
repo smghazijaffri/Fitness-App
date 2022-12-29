@@ -1,5 +1,6 @@
 package com.example.fitnessapp;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,11 +22,21 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.Locale;
+import java.util.Objects;
 
 public class Pedometer extends AppCompatActivity implements SensorEventListener {
 
-    private int seconds = 0;
+    private int seconds = 0, user = 0;
     // Is the stopwatch running?
     private boolean running;
     private boolean wasRunning;
@@ -37,6 +48,7 @@ public class Pedometer extends AppCompatActivity implements SensorEventListener 
     private Sensor accelerometer;
     int stepDetected = 0;
     DatabaseHelper helper;
+    DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
 
     @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
@@ -76,6 +88,20 @@ public class Pedometer extends AppCompatActivity implements SensorEventListener 
         Timer = findViewById(R.id.time_view);
         helper = new DatabaseHelper(Pedometer.this);
 
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot snapshot) {
+                if (snapshot.hasChild("Pedometer")){
+                    user = (int) snapshot.child("Pedometer").getChildrenCount();
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         stepDetectorSensor = sensorManager.getDefaultSensor(Sensor.TYPE_STEP_DETECTOR);
         accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
@@ -105,11 +131,11 @@ public class Pedometer extends AppCompatActivity implements SensorEventListener 
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int step, date;
+                /*int step, date;
                 String time;
                 step = Integer.parseInt(textViewStepDetector.getText().toString().trim());
                 time = (Timer.getText().toString().trim());
-                /*date = today.trim();*/
+                *//*date = today.trim();*//*
 
                 if (step <= 0){
                     Toast.makeText(Pedometer.this, "No steps to register", Toast.LENGTH_SHORT).show();
@@ -120,6 +146,32 @@ public class Pedometer extends AppCompatActivity implements SensorEventListener 
                     helper.InsertSteps(time, step);
                     finish();
                     startActivity(getIntent());
+                }*/
+                String step, date;
+                String time;
+                step = (textViewStepDetector.getText().toString().trim());
+                time = (Timer.getText().toString().trim());
+                int stepss = Integer.parseInt(step);
+
+                DataShanri shanri = new DataShanri(time, step);
+                if (stepss <= 0){
+                    Toast.makeText(Pedometer.this, "No steps to register", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    databaseReference.child("Pedometer").child(String.valueOf(user + 1)).child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(shanri).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()) {
+                                Toast.makeText(Pedometer.this, "Success", Toast.LENGTH_SHORT).show();
+                                onPause();
+                                textViewStepDetector.setText("0");
+                                finish();
+                                startActivity(getIntent());
+                            } else {
+                                Toast.makeText(Pedometer.this, "Error", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
                 }
             }
         });
@@ -132,17 +184,36 @@ public class Pedometer extends AppCompatActivity implements SensorEventListener 
     }
 
     public void GetAllData() {
-        String data = "";
-        Cursor cursor = helper.GetDataCursor();
+        final String[] data = {""};
+        /*Cursor cursor = helper.GetDataCursor();
         while (cursor.moveToNext()) {
             data = data + "Duration: " + cursor.getString(1) + " ";
             data = data + "Steps: " + cursor.getString(2) + "\n";
 
         }
-        AlertDialog.Builder build = new AlertDialog.Builder(Pedometer.this);
+        AlertDialog.Builder build = new AlertDialog.Builder(MainActivity.this);
         build.setTitle("All Data");
         build.setMessage(data);
-        build.show();
+        build.show();*/
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                AlertDialog.Builder build = new AlertDialog.Builder(Pedometer.this);
+                if (snapshot.exists()) {
+                    if (snapshot.child("Pedometer").getValue() != null) {
+                        data[0] = snapshot.child("Pedometer").getValue().toString();
+                    }
+                }
+                build.setTitle("Step History");
+                build.setMessage(data[0]);
+                build.show();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(Pedometer.this, "Fail to get data.", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     public void onSaveInstanceState(Bundle savedInstanceState) {
@@ -157,7 +228,6 @@ public class Pedometer extends AppCompatActivity implements SensorEventListener 
 
     private void runTimer()
     {
-
         // Get the text view.
         final TextView timeView = (TextView)findViewById(R.id.time_view);
 
