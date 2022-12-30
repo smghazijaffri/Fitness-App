@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="@drawable/mobile"
     tools:context=".SignIn">
 
     <EditText
@@ -32,20 +32,29 @@
         android:minHeight="48dp"
         android:textColor="@color/black"
         android:textColorHint="#757575" />
-    <Button
-        android:id="@+id/register"
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register"
-        android:backgroundTint="@color/white"
-        android:layout_margin="20dp"
-        android:textColor="@color/black" />
-    <Button
-        android:id="@+id/login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:backgroundTint="@color/white"
-        android:layout_margin="20dp"
-        android:textColor="@color/black" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:backgroundTint="@color/white"
+            android:layout_margin="20dp"
+            android:textColor="@color/black" />
+        <Button
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:backgroundTint="@color/white"
+            android:layout_margin="20dp"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
 </LinearLayout>
