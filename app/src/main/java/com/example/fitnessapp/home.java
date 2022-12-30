@@ -41,7 +41,7 @@ public class home extends AppCompatActivity {
         Intent intent = getIntent();
         intent.getExtras();
 
-        if(intent.hasExtra("Logged In"))
+        if (intent.hasExtra("Logged In"))
         {
             Toast.makeText(this, "Welcome", Toast.LENGTH_SHORT).show();
             onBackPressed();
