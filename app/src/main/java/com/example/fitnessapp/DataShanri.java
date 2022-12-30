@@ -1,7 +1,7 @@
 package com.example.fitnessapp;
 
 public class DataShanri {
-    public String timer, date, steps;
+    public String timer, steps;
     public DataShanri() {
 
     }
@@ -10,4 +10,5 @@ public class DataShanri {
         this.timer = timer;
         this.steps = (steps);
     }
+
 }
