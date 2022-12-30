@@ -13,6 +13,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.icu.text.SimpleDateFormat;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -31,6 +32,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Date;
 import java.util.Locale;
 import java.util.Objects;
 
@@ -49,6 +51,8 @@ public class Pedometer extends AppCompatActivity implements SensorEventListener 
     int stepDetected = 0;
     DatabaseHelper helper;
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
+    SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+    String today = format.format(new Date());
 
     @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
@@ -147,13 +151,12 @@ public class Pedometer extends AppCompatActivity implements SensorEventListener 
                     finish();
                     startActivity(getIntent());
                 }*/
-                String step, date;
-                String time;
+                String step, date = today, time;
                 step = (textViewStepDetector.getText().toString().trim());
                 time = (Timer.getText().toString().trim());
                 int stepss = Integer.parseInt(step);
 
-                DataShanri shanri = new DataShanri(time, step);
+                DataShanri shanri = new DataShanri(date, time, step);
                 if (stepss <= 0){
                     Toast.makeText(Pedometer.this, "No steps to register", Toast.LENGTH_SHORT).show();
                 }

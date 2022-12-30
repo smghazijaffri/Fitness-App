@@ -44,6 +44,7 @@ public class home extends AppCompatActivity {
         if(intent.hasExtra("Logged In"))
         {
             Toast.makeText(this, "Welcome", Toast.LENGTH_SHORT).show();
+            onBackPressed();
         }
 
         FBody.setOnClickListener(new View.OnClickListener() {
@@ -138,5 +139,9 @@ public class home extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+    @Override
+    public void onBackPressed() {
+        /* super.onBackPressed(); */
     }
 }
