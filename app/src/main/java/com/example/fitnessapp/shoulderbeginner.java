@@ -24,7 +24,7 @@ public class shoulderbeginner extends AppCompatActivity {
 
 
 
-        vid = findViewById(R.id.jumpingjacks);
+        vid = findViewById(R.id.jump);
         vid2 = findViewById(R.id.rhomboidpulls);
         vid3 = findViewById(R.id.sidearmraise);
         vid4 = findViewById(R.id.kneepushup);
@@ -35,8 +35,8 @@ public class shoulderbeginner extends AppCompatActivity {
         vid9 = findViewById(R.id.catcow);
         vid10 = findViewById(R.id.pronetriceppushups);
         vid11 = findViewById(R.id.reclinedrhomboidsqueezes);
-        vid12 = findViewById(R.id.pronetriceppushups);
-        vid13 = findViewById(R.id.reclinedrhomboidsqueezes);
+        vid12 = findViewById(R.id.pronetriceppushups2);
+        vid13 = findViewById(R.id.reclinedrhomboidsqueezes2);
 
 
 
@@ -114,6 +114,12 @@ public class shoulderbeginner extends AppCompatActivity {
             }
         });
         vid8.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.setLooping(true);
+            }
+        });
+        vid9.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mp) {
                 mp.setLooping(true);

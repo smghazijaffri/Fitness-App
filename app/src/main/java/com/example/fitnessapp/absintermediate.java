@@ -8,29 +8,40 @@ import android.os.Bundle;
 import android.widget.VideoView;
 
 public class absintermediate extends AppCompatActivity {
-    VideoView vid, vid2, vid3, vid4, vid5,vid6,vid7,vid8,vid9,vid10,vid11,vid12,vid13;
+    VideoView vid, vid2, vid3, vid4, vid5,vid6,vid7,vid8,vid9,vid10,vid11,vid12,vid13,vid14;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_absintermediate);
 
         String path = "android.resource://"+ getPackageName() +"/"+R.raw.jumpingjack;
-        String path2 = "android.resource://"+ getPackageName() +"/"+R.raw.abdominalcrunches;
-        String path3 = "android.resource://"+ getPackageName() +"/"+R.raw.russiantwist;
+        String path2 = "android.resource://"+ getPackageName() +"/"+R.raw.crossovercrunch;
+        String path3 = "android.resource://"+ getPackageName() +"/"+R.raw.sidebridgeleft;
         String path4 = "android.resource://"+ getPackageName() +"/"+R.raw.mountainclimber;
-        String path5 = "android.resource://"+ getPackageName() +"/"+R.raw.legraises;
-        String path6 = "android.resource://"+ getPackageName() +"/"+R.raw.cobrastretch;
+        String path5 = "android.resource://"+ getPackageName() +"/"+R.raw.sidebridgeright;
+        String path6 = "android.resource://"+ getPackageName() +"/"+R.raw.buttbridge;
+        String path7 = "android.resource://"+ getPackageName() +"/"+R.raw.bicyclecrunch;
+        String path8 = "android.resource://"+ getPackageName() +"/"+R.raw.abdominalcrunches;
+        String path9 = "android.resource://"+ getPackageName() +"/"+R.raw.legraises;
+        String path10 = "android.resource://"+ getPackageName() +"/"+R.raw.pushuprotation;
 
-        vid = findViewById(R.id.jump);;
-        vid2 = findViewById(R.id.abdominal);
-        vid3 = findViewById(R.id.russiantwist);
+
+
+        vid = findViewById(R.id.jump);
+        vid2 = findViewById(R.id.crossover);
+        vid3 = findViewById(R.id.bridgeleft);
         vid4 = findViewById(R.id.mountainclimeber);
-        vid5 = findViewById(R.id.legraises);
-        vid6 = findViewById(R.id.abdominal2);
-        vid7 = findViewById(R.id.russiantwist2);
-        vid8 = findViewById(R.id.mountainclimeber2);
-        vid9 = findViewById(R.id.legraises2);
-        vid10 = findViewById(R.id.cobra);
+        vid5 = findViewById(R.id.bridgeright);
+        vid6 = findViewById(R.id.buttbridge);
+        vid7 = findViewById(R.id.bicyclecrunches);
+        vid8 = findViewById(R.id.abdominal);
+        vid9 = findViewById(R.id.crossover2);
+        vid10 = findViewById(R.id.legraises);
+        vid11 = findViewById(R.id.bicyclecrunches2);
+        vid12 = findViewById(R.id.pushandrotate);
+
+
+
 
 
         Uri uri = Uri.parse(path);
@@ -39,17 +50,28 @@ public class absintermediate extends AppCompatActivity {
         Uri uri4 = Uri.parse(path4);
         Uri uri5 = Uri.parse(path5);
         Uri uri6 = Uri.parse(path6);
+        Uri uri7 = Uri.parse(path7);
+        Uri uri8 = Uri.parse(path8);
+        Uri uri9 = Uri.parse(path9);
+        Uri uri10 = Uri.parse(path10);
+
 
         vid.setVideoURI(uri);
         vid2.setVideoURI(uri2);
         vid3.setVideoURI(uri3);
         vid4.setVideoURI(uri4);
         vid5.setVideoURI(uri5);
-        vid6.setVideoURI(uri2);
-        vid7.setVideoURI(uri3);
-        vid8.setVideoURI(uri4);
-        vid9.setVideoURI(uri5);
-        vid10.setVideoURI(uri6);
+        vid6.setVideoURI(uri6);
+        vid7.setVideoURI(uri7);
+        vid8.setVideoURI(uri8);
+        vid9.setVideoURI(uri2);
+        vid10.setVideoURI(uri9);
+        vid11.setVideoURI(uri7);
+        vid12.setVideoURI(uri10);
+
+
+
+
 
         vid.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
@@ -111,6 +133,19 @@ public class absintermediate extends AppCompatActivity {
                 mp.setLooping(true);
             }
         });
+        vid11.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.setLooping(true);
+            }
+        });
+        vid12.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.setLooping(true);
+            }
+        });
+
 
         vid.start();
         vid2.start();
@@ -122,5 +157,8 @@ public class absintermediate extends AppCompatActivity {
         vid8.start();
         vid9.start();
         vid10.start();
+        vid11.start();
+        vid12.start();
+
     }
 }

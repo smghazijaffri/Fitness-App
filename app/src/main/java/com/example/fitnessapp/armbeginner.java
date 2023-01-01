@@ -36,14 +36,15 @@ public class armbeginner extends AppCompatActivity {
         vid3 = findViewById(R.id.armcircleclock);
         vid4 = findViewById(R.id.armcircleanclock);
         vid5 = findViewById(R.id.diamondpushup);
-        vid6 = findViewById(R.id.jumpingjacks);
+        vid6 = findViewById(R.id.jump);
         vid7 = findViewById(R.id.chestpresspulse);
         vid8 = findViewById(R.id.legabarbellcurlleft);
         vid9 = findViewById(R.id.legabarbellcurlright);
         vid10 = findViewById(R.id.diagnolplank);
         vid11 = findViewById(R.id.punches);
-        vid12 = findViewById(R.id.inchworms);
-        vid13 = findViewById(R.id.wallpush);
+
+        vid13 = findViewById(R.id.inchworms);
+        vid14 = findViewById(R.id.wallpush);
 
 
 
@@ -76,8 +77,9 @@ public class armbeginner extends AppCompatActivity {
         vid9.setVideoURI(uri9);
         vid10.setVideoURI(uri10);
         vid11.setVideoURI(uri11);
-        vid12.setVideoURI(uri12);
+
         vid13.setVideoURI(uri13);
+        vid14.setVideoURI(uri14);
 
 
 
@@ -130,7 +132,12 @@ public class armbeginner extends AppCompatActivity {
                 mp.setLooping(true);
             }
         });
-
+        vid9.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.setLooping(true);
+            }
+        });
         vid10.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mp) {
@@ -143,19 +150,19 @@ public class armbeginner extends AppCompatActivity {
                 mp.setLooping(true);
             }
         });
-        vid12.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.setLooping(true);
-            }
-        });
+
         vid13.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mp) {
                 mp.setLooping(true);
             }
         });
-
+        vid14.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.setLooping(true);
+            }
+        });
         vid.start();
         vid2.start();
         vid3.start();
@@ -167,8 +174,9 @@ public class armbeginner extends AppCompatActivity {
         vid9.start();
         vid10.start();
         vid11.start();
-        vid12.start();
+
         vid13.start();
+        vid14.start();
 
 
     }

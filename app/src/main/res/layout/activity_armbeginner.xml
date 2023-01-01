@@ -467,7 +467,7 @@
                 android:layout_gravity="center|center_horizontal"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="Wall Calf Raises"
+                android:text="Punches"
                 android:paddingBottom="1dp"
                 android:textSize="15sp"
                 android:layout_marginStart="30dp"
@@ -484,45 +484,6 @@
 
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/pushcard"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_margin="10dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardElevation="10dp"
-            app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true">
-
-            <VideoView
-                android:id="@+id/push"
-                android:layout_width="90dp"
-                android:layout_height="fill_parent"
-                />
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|center_horizontal"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:text="Push-ups"
-                android:paddingBottom="1dp"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="x4"
-                android:textColor="#FF8A80"
-                android:layout_gravity="bottom|center_horizontal"
-                android:layout_margin="5dp"/>
-
-        </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/inchwormscard"
@@ -588,7 +549,7 @@
                 android:layout_gravity="center|center_horizontal"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="Wall pusp-up"
+                android:text="Wall push-up"
                 android:paddingBottom="1dp"
                 android:textSize="15sp"
                 android:layout_marginStart="30dp"
