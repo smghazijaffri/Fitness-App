@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Scroll"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,7 +14,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@color/white"
-        tools:context=".fullbody">
+        >
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -42,8 +43,9 @@
                 android:layout_gravity="center|center_horizontal"
                 android:textSize="25sp"/>
         </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
-            android:id="@+id/sideahopcard"
+            android:id="@+id/sidearmraisecard"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_margin="10dp"
@@ -55,9 +57,11 @@
             app:cardPreventCornerOverlap="true">
 
             <VideoView
-                android:id="@+id/sidehop"
+                android:id="@+id/sidearmraise"
                 android:layout_width="90dp"
-                android:layout_height="wrap_content"/>
+                android:layout_height="fill_parent"
+                />
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -65,7 +69,7 @@
                 android:layout_gravity="center|center_horizontal"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="Side Hop"
+                android:text="Side arm raise"
                 android:paddingBottom="1dp"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -79,9 +83,8 @@
                 android:layout_margin="5dp"/>
 
         </androidx.cardview.widget.CardView>
-
         <androidx.cardview.widget.CardView
-            android:id="@+id/squatcard"
+            android:id="@+id/tricepdipscard"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_margin="10dp"
@@ -93,7 +96,7 @@
             app:cardPreventCornerOverlap="true">
 
             <VideoView
-                android:id="@+id/squat"
+                android:id="@+id/tricepdips"
                 android:layout_width="90dp"
                 android:layout_height="fill_parent"
                 />
@@ -105,46 +108,7 @@
                 android:layout_gravity="center|center_horizontal"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="Squats"
-                android:paddingBottom="1dp"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="x12"
-                android:textColor="#FF8A80"
-                android:layout_gravity="bottom|center_horizontal"
-                android:layout_margin="5dp"/>
-
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/lsidelyingcard"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_margin="10dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardElevation="10dp"
-            app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true">
-
-            <VideoView
-                android:id="@+id/leftsidelying"
-                android:layout_width="90dp"
-                android:layout_height="fill_parent"
-                />
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|center_horizontal"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:text="Side-Lying Leg Lift Left"
+                android:text="Tricep dips"
                 android:layout_marginStart="40dp"
                 android:paddingBottom="1dp"
                 android:textSize="15sp"
@@ -153,14 +117,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="x12"
+                android:text="x10"
                 android:textColor="#FF8A80"
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_margin="5dp"/>
 
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
-            android:id="@+id/rsidelyingcard"
+            android:id="@+id/armcircleclockcard"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_margin="10dp"
@@ -172,7 +136,7 @@
             app:cardPreventCornerOverlap="true">
 
             <VideoView
-                android:id="@+id/rightsidelying"
+                android:id="@+id/armcircleclock"
                 android:layout_width="90dp"
                 android:layout_height="fill_parent"
                 />
@@ -184,7 +148,7 @@
                 android:layout_gravity="center|center_horizontal"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="Side-Lying Leg Lift Right"
+                android:text="Arm circle clockwise"
                 android:paddingBottom="1dp"
                 android:textSize="15sp"
                 android:layout_marginStart="30dp"
@@ -193,14 +157,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="x12"
+                android:text="00:30"
                 android:textColor="#FF8A80"
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_margin="5dp"/>
 
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
-            android:id="@+id/backlungecard"
+            android:id="@+id/armcircleanclockcard"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_margin="10dp"
@@ -212,7 +176,7 @@
             app:cardPreventCornerOverlap="true">
 
             <VideoView
-                android:id="@+id/backlunge"
+                android:id="@+id/armcircleanclock"
                 android:layout_width="90dp"
                 android:layout_height="fill_parent"
                 />
@@ -224,7 +188,7 @@
                 android:layout_gravity="center|center_horizontal"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="Backward Lunge"
+                android:text="Arm circle anti-clockwise"
                 android:paddingBottom="1dp"
                 android:textSize="15sp"
                 android:layout_marginStart="30dp"
@@ -241,7 +205,7 @@
 
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
-            android:id="@+id/ldkickscard"
+            android:id="@+id/diamondpushupcard"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_margin="10dp"
@@ -253,7 +217,7 @@
             app:cardPreventCornerOverlap="true">
 
             <VideoView
-                android:id="@+id/leftdonkey"
+                android:id="@+id/diamondpushup"
                 android:layout_width="90dp"
                 android:layout_height="fill_parent"
                 />
@@ -263,7 +227,7 @@
                 android:layout_gravity="center|center_horizontal"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="Donkey Kicks Left"
+                android:text="Diamond pushup"
                 android:paddingBottom="1dp"
                 android:textSize="15sp"
                 android:layout_marginStart="30dp"
@@ -273,14 +237,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="x16"
+                android:text="x6"
                 android:textColor="#FF8A80"
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_margin="5dp"/>
 
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
-            android:id="@+id/rdkickscard"
+            android:id="@+id/jumpcard"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_margin="10dp"
@@ -292,129 +256,8 @@
             app:cardPreventCornerOverlap="true">
 
             <VideoView
-                android:id="@+id/rightdonkey"
-                android:layout_width="90dp"
-                android:layout_height="fill_parent"
-                />
-
-            <TextView
+                android:id="@+id/jump"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|center_horizontal"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:text="Donkey Kicks Right"
-                android:paddingBottom="1dp"
-                android:textSize="15sp"
-                android:layout_marginStart="30dp"
-                android:textStyle="bold"
-                android:textColor="@color/black"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="x16"
-                android:textColor="#FF8A80"
-                android:layout_gravity="bottom|center_horizontal"
-                android:layout_margin="5dp"/>
-
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/lqswcard"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_margin="10dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardElevation="10dp"
-            app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true">
-
-            <VideoView
-                android:id="@+id/lqws"
-                android:layout_width="90dp"
-                android:layout_height="fill_parent"
-                />
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|center_horizontal"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:text="Left Quad Stretch with Wall"
-                android:paddingBottom="1dp"
-                android:textSize="15sp"
-                android:layout_marginStart="30dp"
-                android:textStyle="bold"
-                android:textColor="@color/black"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="00:30"
-                android:textColor="#FF8A80"
-                android:layout_gravity="bottom|center_horizontal"
-                android:layout_margin="5dp"/>
-
-        </androidx.cardview.widget.CardView>
-        <androidx.cardview.widget.CardView
-            android:id="@+id/rqwscard"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_margin="10dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardElevation="10dp"
-            app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true">
-
-            <VideoView
-                android:id="@+id/rqws"
-                android:layout_width="90dp"
-                android:layout_height="fill_parent"
-                />
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|center_horizontal"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:text="Right Quad Stretch with Wall"
-                android:paddingBottom="1dp"
-                android:textSize="15sp"
-                android:layout_marginStart="30dp"
-                android:textStyle="bold"
-                android:textColor="@color/black"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="00:30"
-                android:textColor="#FF8A80"
-                android:layout_gravity="bottom|center_horizontal"
-                android:layout_margin="5dp"/>
-
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/lkneechestcard"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_margin="10dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            app:cardBackgroundColor="@color/white"
-            app:cardElevation="10dp"
-            app:cardMaxElevation="12dp"
-            app:cardPreventCornerOverlap="true">
-
-            <VideoView
-                android:id="@+id/letkneechest"
-                android:layout_width="90dp"
                 android:layout_height="wrap_content"/>
 
             <TextView
@@ -423,24 +266,22 @@
                 android:layout_gravity="center|center_horizontal"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="Knee to Chest Stretch Left"
+                android:text="Jumping Jacks"
                 android:paddingBottom="1dp"
-                android:textSize="15sp"
-                android:layout_marginStart="30dp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="00:30"
+                android:text="00:20"
                 android:textColor="#FF8A80"
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_margin="5dp"/>
 
         </androidx.cardview.widget.CardView>
-
         <androidx.cardview.widget.CardView
-            android:id="@+id/diagplankcard"
+            android:id="@+id/chestpresspulsecard"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_margin="10dp"
@@ -452,7 +293,7 @@
             app:cardPreventCornerOverlap="true">
 
             <VideoView
-                android:id="@+id/diagplank"
+                android:id="@+id/chestpresspulse"
                 android:layout_width="90dp"
                 android:layout_height="fill_parent"
                 />
@@ -464,23 +305,23 @@
                 android:layout_gravity="center|center_horizontal"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="Knee to Chest Stretch Right"
+                android:text="Chest press pulse"
+                android:paddingBottom="1dp"
                 android:textSize="15sp"
                 android:layout_marginStart="30dp"
-                android:paddingBottom="1dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="00:30"
+                android:text="00:16"
                 android:textColor="#FF8A80"
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_margin="5dp"/>
-        </androidx.cardview.widget.CardView>
 
+        </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
-            android:id="@+id/wallcalfcard"
+            android:id="@+id/legabarbellcurlleftcard"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_margin="10dp"
@@ -492,7 +333,131 @@
             app:cardPreventCornerOverlap="true">
 
             <VideoView
-                android:id="@+id/wallcalf"
+                android:id="@+id/legabarbellcurlleft"
+                android:layout_width="90dp"
+                android:layout_height="fill_parent"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Leg barbell curl left"
+                android:paddingBottom="1dp"
+                android:textSize="15sp"
+                android:layout_marginStart="30dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="x8"
+                android:textColor="#FF8A80"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_margin="5dp"/>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/legabarbellcurlrightcard"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true">
+
+            <VideoView
+                android:id="@+id/legabarbellcurlright"
+                android:layout_width="90dp"
+                android:layout_height="fill_parent"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Leg barbell curl left"
+                android:paddingBottom="1dp"
+                android:textSize="15sp"
+                android:layout_marginStart="30dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="x8"
+                android:textColor="#FF8A80"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_margin="5dp"/>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/diagnolplankcard"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true">
+
+            <VideoView
+                android:id="@+id/diagnolplank"
+                android:layout_width="90dp"
+                android:layout_height="fill_parent"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Diagonal plank"
+                android:textSize="15sp"
+                android:layout_marginStart="30dp"
+                android:paddingBottom="1dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="x10"
+                android:textColor="#FF8A80"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_margin="5dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/punchescard"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true">
+
+            <VideoView
+                android:id="@+id/punches"
                 android:layout_width="90dp"
                 android:layout_height="fill_parent"
                 />
@@ -503,7 +468,7 @@
                 android:layout_gravity="center|center_horizontal"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="Wall Calf Raises"
+                android:text="Punches"
                 android:paddingBottom="1dp"
                 android:textSize="15sp"
                 android:layout_marginStart="30dp"
@@ -520,8 +485,9 @@
 
         </androidx.cardview.widget.CardView>
 
+
         <androidx.cardview.widget.CardView
-            android:id="@+id/sscrwcard"
+            android:id="@+id/inchwormscard"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_margin="10dp"
@@ -533,7 +499,7 @@
             app:cardPreventCornerOverlap="true">
 
             <VideoView
-                android:id="@+id/sscrw"
+                android:id="@+id/inchworms"
                 android:layout_width="90dp"
                 android:layout_height="fill_parent"
                 />
@@ -544,10 +510,50 @@
                 android:layout_gravity="center|center_horizontal"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="Sumo Squat Calf Raises with Wall"
+                android:text="Inchworms"
                 android:paddingBottom="1dp"
                 android:textSize="15sp"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="30dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="x8"
+                android:textColor="#FF8A80"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_margin="5dp"/>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/wallpushcard"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true">
+
+            <VideoView
+                android:id="@+id/wallpush"
+                android:layout_width="90dp"
+                android:layout_height="fill_parent"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Wall push-up"
+                android:paddingBottom="1dp"
+                android:textSize="15sp"
+                android:layout_marginStart="30dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"/>
             <TextView
@@ -558,9 +564,8 @@
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_margin="5dp"/>
         </androidx.cardview.widget.CardView>
-
         <androidx.cardview.widget.CardView
-            android:id="@+id/lcalfcard"
+            android:id="@+id/tricepstretchleftcard"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_margin="10dp"
@@ -571,11 +576,13 @@
             app:cardMaxElevation="12dp"
             app:cardPreventCornerOverlap="true">
 
-            <VideoView
-                android:id="@+id/lalf"
+            <ImageView
+                android:id="@+id/tricepstretchleft"
                 android:layout_width="90dp"
                 android:layout_height="fill_parent"
+                android:src="@drawable/tricepstretchleft"
                 />
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -583,7 +590,47 @@
                 android:layout_gravity="center|center_horizontal"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="Calf Stretch Left"
+                android:text="Tricep Stretch left"
+                android:paddingBottom="1dp"
+                android:textSize="15sp"
+                android:layout_marginStart="30dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:30"
+                android:textColor="#FF8A80"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_margin="5dp"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/tricepstretchrightcard"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true">
+
+            <ImageView
+                android:id="@+id/tricepstretchright"
+                android:layout_width="90dp"
+                android:layout_height="fill_parent"
+                android:src="@drawable/tricepstretchright"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Tricep stretch right"
                 android:paddingBottom="1dp"
                 android:textSize="15sp"
                 android:layout_marginStart="30dp"
@@ -599,7 +646,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/rcalfcard"
+            android:id="@+id/standingbicepleftcard"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_margin="10dp"
@@ -610,10 +657,11 @@
             app:cardMaxElevation="12dp"
             app:cardPreventCornerOverlap="true">
 
-            <VideoView
-                android:id="@+id/rcalf"
+            <ImageView
+                android:id="@+id/standingbicepleft"
                 android:layout_width="90dp"
                 android:layout_height="fill_parent"
+                android:src="@drawable/standingbicepstretchleft"
                 />
 
 
@@ -623,7 +671,47 @@
                 android:layout_gravity="center|center_horizontal"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:text="Calf Stretch Left"
+                android:text="Standing bicep stretch left"
+                android:paddingBottom="1dp"
+                android:textSize="15sp"
+                android:layout_marginStart="30dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:30"
+                android:textColor="#FF8A80"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_margin="5dp"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/standingbiceprightcard"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="12dp"
+            app:cardPreventCornerOverlap="true">
+
+            <ImageView
+                android:id="@+id/standingbicepright"
+                android:layout_width="90dp"
+                android:layout_height="fill_parent"
+                android:src="@drawable/standinfbicepstretchright"
+                />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Standing bicep stretch right"
                 android:paddingBottom="1dp"
                 android:textSize="15sp"
                 android:layout_marginStart="30dp"

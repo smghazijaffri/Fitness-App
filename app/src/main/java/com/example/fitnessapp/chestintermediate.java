@@ -5,14 +5,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.widget.ScrollView;
 import android.widget.VideoView;
 
 public class chestintermediate extends AppCompatActivity {
     VideoView vid, vid2, vid3, vid4, vid5,vid6,vid7,vid8,vid9,vid10,vid11,vid12,vid13;
+    ScrollView scView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chestintermediate);
+        scView = findViewById(R.id.Scroll);
+        scView.smoothScrollTo(0,0);
 
         String path = "android.resource://"+ getPackageName() +"/"+R.raw.jumpingjack;
         String path2 = "android.resource://"+ getPackageName() +"/"+R.raw.inclinepushup;

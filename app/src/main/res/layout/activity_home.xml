@@ -31,59 +31,9 @@
             android:text="FITNESS APP"
             android:textStyle="bold"
             android:fontFamily="sans-serif"
-            android:layout_gravity= "center|top"
-            android:textSize="25sp" />
+            android:layout_gravity= "center|center_vertical"
+            android:textSize="35sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:layout_gravity="center|start"
-                android:text="WORKOUT"
-                android:textStyle="italic"
-                android:layout_margin="10dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="KCAL"
-                android:textStyle="italic"
-                android:gravity="center"
-                android:layout_gravity="center|center_vertical"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Minute"
-                android:textStyle="italic"
-                android:gravity="end"
-                android:layout_gravity="center|end"
-                android:layout_margin="10dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_gravity="start|bottom"
-            android:layout_margin="20dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:textStyle="bold"
-            android:gravity="center|bottom"
-            android:layout_gravity="center|bottom"
-            android:layout_margin="20dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:textStyle="bold"
-            android:gravity="end"
-            android:layout_gravity="end|center|bottom"
-            android:layout_margin="20dp"/>
 
     </androidx.cardview.widget.CardView>
 

@@ -5,14 +5,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.widget.ScrollView;
 import android.widget.VideoView;
 
 public class absintermediate extends AppCompatActivity {
     VideoView vid, vid2, vid3, vid4, vid5,vid6,vid7,vid8,vid9,vid10,vid11,vid12,vid13,vid14;
+    ScrollView scView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_absintermediate);
+        scView = findViewById(R.id.Scroll);
+        scView.smoothScrollTo(0,0);
 
         String path = "android.resource://"+ getPackageName() +"/"+R.raw.jumpingjack;
         String path2 = "android.resource://"+ getPackageName() +"/"+R.raw.crossovercrunch;
@@ -24,6 +29,7 @@ public class absintermediate extends AppCompatActivity {
         String path8 = "android.resource://"+ getPackageName() +"/"+R.raw.abdominalcrunches;
         String path9 = "android.resource://"+ getPackageName() +"/"+R.raw.legraises;
         String path10 = "android.resource://"+ getPackageName() +"/"+R.raw.pushuprotation;
+        String path11 = "android.resource://"+ getPackageName() +"/"+R.raw.cobrastretch;
 
 
 
@@ -39,7 +45,7 @@ public class absintermediate extends AppCompatActivity {
         vid10 = findViewById(R.id.legraises);
         vid11 = findViewById(R.id.bicyclecrunches2);
         vid12 = findViewById(R.id.pushandrotate);
-
+        vid13 = findViewById(R.id.cobra);
 
 
 
@@ -54,7 +60,7 @@ public class absintermediate extends AppCompatActivity {
         Uri uri8 = Uri.parse(path8);
         Uri uri9 = Uri.parse(path9);
         Uri uri10 = Uri.parse(path10);
-
+        Uri uri11 = Uri.parse(path11);
 
         vid.setVideoURI(uri);
         vid2.setVideoURI(uri2);
@@ -68,7 +74,7 @@ public class absintermediate extends AppCompatActivity {
         vid10.setVideoURI(uri9);
         vid11.setVideoURI(uri7);
         vid12.setVideoURI(uri10);
-
+        vid13.setVideoURI(uri11);
 
 
 
@@ -145,6 +151,12 @@ public class absintermediate extends AppCompatActivity {
                 mp.setLooping(true);
             }
         });
+        vid13.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.setLooping(true);
+            }
+        });
 
 
         vid.start();
@@ -159,6 +171,6 @@ public class absintermediate extends AppCompatActivity {
         vid10.start();
         vid11.start();
         vid12.start();
-
+        vid13.start();
     }
 }

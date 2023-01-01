@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Scroll"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,7 +14,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@color/white"
-        tools:context=".lowerbody">
+        tools:context=".absintermediate">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -659,6 +660,7 @@
                 android:id="@+id/sideplankright"
                 android:layout_width="90dp"
                 android:layout_height="fill_parent"
+                android:src="@drawable/sideplankright"
                 />
 
 
@@ -699,6 +701,7 @@
                 android:id="@+id/sideplankleft"
                 android:layout_width="90dp"
                 android:layout_height="fill_parent"
+                android:src="@drawable/sideplankleft"
                 />
 
 
