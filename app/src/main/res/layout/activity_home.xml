@@ -44,7 +44,7 @@
             android:layout_margin="10dp"
             android:elevation="10dp"
             android:textSize="20sp"
-            android:text="Username"
+            android:text=" "
             android:textStyle="bold"/>
 
         <TextView
@@ -110,7 +110,7 @@
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="CHALLENGES"
         android:textStyle="bold|italic"
@@ -185,7 +185,7 @@
 
     </androidx.cardview.widget.CardView>
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="BEGINNER"
         android:textColor="@color/black"
@@ -364,7 +364,7 @@
 
 </androidx.cardview.widget.CardView>
 <TextView
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="INTERMEDIATE"
     android:layout_marginTop="15dp"
@@ -542,7 +542,7 @@
 
     </androidx.cardview.widget.CardView>
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="ADVANCED"
         android:textColor="@color/black"

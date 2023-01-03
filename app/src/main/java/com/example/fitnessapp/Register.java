@@ -3,8 +3,10 @@ package com.example.fitnessapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.HapticFeedbackConstants;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,6 +17,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -42,10 +45,12 @@ public class Register extends AppCompatActivity {
         Register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                v.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
                 String pass = Password.getText().toString().trim();
                 String cpass = ConfirmPass.getText().toString().trim();
                 if (pass.equals(cpass)){
                     Register();
+                    startActivity(new Intent(Register.this, SignIn.class));
                 }
                 else{
                     Password.setError("Passwords don't match");
@@ -57,6 +62,7 @@ public class Register extends AppCompatActivity {
         Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                v.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
                 Intent intent = new Intent(Register.this, SignIn.class);
                 startActivity(intent);
             }
@@ -68,11 +74,13 @@ public class Register extends AppCompatActivity {
         /* super.onBackPressed(); */
     }
 
+    @SuppressLint("NotConstructor")
     private void Register() {
         String Nm = Name.getText().toString().trim();
         String Em = Email.getText().toString().trim();
         String Pass = Password.getText().toString().trim();
         String CPass = ConfirmPass.getText().toString().trim();
+
         if (Em.isEmpty()) {
             Email.setError("Field Empty");
         } else if (Nm.isEmpty()) {
@@ -86,8 +94,19 @@ public class Register extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
-                        Toast.makeText(Register.this, "Registration Successful", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(Register.this, home.class));
+                        /*Toast.makeText(Register.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(Register.this, home.class));*/
+                        FirebaseDatabase.getInstance().getReference("User").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("Name").setValue(Nm).addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if(task.isSuccessful()){
+                                    Toast.makeText(Register.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                                }
+                                else{
+                                    Toast.makeText(Register.this, "Error Occured", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
                     } else {
                         Toast.makeText(Register.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     }

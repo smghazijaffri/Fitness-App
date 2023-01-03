@@ -1,20 +1,30 @@
 package com.example.fitnessapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.HapticFeedbackConstants;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class home extends AppCompatActivity {
     CardView FBody, LBody, ABegin, CBegin, ArmBegin, LBegin, SBegin, AbsInter, ChestInter, ArmInter, LegsInter, ShoulderInter, AbsAdv, ChestAdv, ArmAdv, LegsAdv, ShoulderAdv, Pedometer;
-    TextView SignOut;
+    TextView SignOut, Username;
+    DatabaseReference Dbref;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +48,11 @@ public class home extends AppCompatActivity {
         ShoulderAdv = findViewById(R.id.shoulderadv);
         Pedometer = findViewById(R.id.Pedo);
         SignOut = findViewById(R.id.signout);
+        Username = findViewById(R.id.username);
+        String uid;
+        FirebaseUser user;
+
+
 
         Intent intent = getIntent();
         intent.getExtras();
@@ -47,6 +62,24 @@ public class home extends AppCompatActivity {
             Toast.makeText(this, "Welcome", Toast.LENGTH_SHORT).show();
             onBackPressed();
         }
+
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        uid = user.getUid();
+        Dbref = FirebaseDatabase.getInstance().getReference("User").child(uid);
+
+        Dbref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                /*for (DataSnapshot items:snapshot.getChildren()){*/
+                    Username.setText(String.valueOf(snapshot.child("Name").getValue()));
+                /*}*/
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         FBody.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -133,6 +166,7 @@ public class home extends AppCompatActivity {
         SignOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                v.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
                 FirebaseAuth.getInstance().signOut();
                 Intent intent = new Intent(home.this, SignIn.class);
                 String out = "Signed Out";

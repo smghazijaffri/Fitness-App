@@ -17,6 +17,7 @@ import android.icu.text.SimpleDateFormat;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.HapticFeedbackConstants;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -26,6 +27,7 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -53,6 +55,8 @@ public class Pedometer extends AppCompatActivity implements SensorEventListener 
     DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
     SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
     String today = format.format(new Date());
+    /*String uid;
+    FirebaseUser data;*/
 
     @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
@@ -119,22 +123,28 @@ public class Pedometer extends AppCompatActivity implements SensorEventListener 
         onPause();
 
         button1.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.R)
             @Override
             public void onClick(View v) {
+                v.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
                 onPause();
                 running = false;
             }
         });
         button2.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.R)
             @Override
             public void onClick(View v) {
+                v.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
                 onResume();
                 running = true;
             }
         });
         button3.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.R)
             @Override
             public void onClick(View v) {
+                v.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
                 /*int step, date;
                 String time;
                 step = Integer.parseInt(textViewStepDetector.getText().toString().trim());
@@ -161,7 +171,7 @@ public class Pedometer extends AppCompatActivity implements SensorEventListener 
                     Toast.makeText(Pedometer.this, "No steps to register", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    databaseReference.child("Pedometer").child(String.valueOf(user + 1)).child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(shanri).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    databaseReference.child("Pedometer").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("Data").child(String.valueOf(user++)).setValue(shanri).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
@@ -179,15 +189,21 @@ public class Pedometer extends AppCompatActivity implements SensorEventListener 
             }
         });
         button4.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.R)
             @Override
             public void onClick(View v) {
+                v.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
                 GetAllData();
             }
         });
+        /*data = FirebaseAuth.getInstance().getCurrentUser();
+        uid = data.getUid();*/
     }
 
     public void GetAllData() {
         final String[] data = {""};
+
+        /*databaseReference = FirebaseDatabase.getInstance().getReference("Pedometer").child(uid);*/
         /*Cursor cursor = helper.GetDataCursor();
         while (cursor.moveToNext()) {
             data = data + "Duration: " + cursor.getString(1) + " ";
@@ -205,6 +221,7 @@ public class Pedometer extends AppCompatActivity implements SensorEventListener 
                 if (snapshot.exists()) {
                     if (snapshot.child("Pedometer").getValue() != null) {
                         data[0] = snapshot.child("Pedometer").getValue().toString();
+                        /*data[0] = (String) snapshot.child("Pedometer").getValue().toString();*/
                     }
                 }
                 build.setTitle("Step History");
