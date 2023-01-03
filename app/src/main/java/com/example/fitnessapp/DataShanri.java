@@ -11,4 +11,7 @@ public class DataShanri {
         this.steps = steps;
         this.date = date;
     }
+    public String toString(){
+        return "\n Duration: " + this.timer + "\n Steps: " + steps + "\n Date: " + date;
+    }
 }
