@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/bghome"
+    android:background="@color/white"
     tools:context=".home">
 
 <LinearLayout
@@ -17,21 +17,57 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/beginner"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="120dp"
         android:layout_margin="10dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        app:cardBackgroundColor="#121010"
+        app:cardBackgroundColor="@color/white"
         app:cardElevation="10dp"
         app:cardMaxElevation="12dp"
+        app:cardCornerRadius="25dp"
         app:cardPreventCornerOverlap="true">
+
+        <ImageView
+            android:id="@+id/userimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Username"
+            android:layout_margin="10dp"
+            android:layout_gravity="start|top"
+            />
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|top"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"
+            android:elevation="10dp"
+            android:textSize="20sp"
+            android:text="Username"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/signout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Out"
+            android:elevation="10dp"
+            android:textSize="20sp"
+            android:layout_gravity="end|top"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"
+            android:textStyle="bold"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="FITNESS APP"
             android:textStyle="bold"
             android:fontFamily="sans-serif"
-            android:layout_gravity= "center|center_vertical"
+            android:layout_gravity= "center|bottom"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"
             android:textSize="35sp" />
 
 
@@ -47,6 +83,7 @@
         app:cardBackgroundColor="@color/white"
         app:cardElevation="10dp"
         app:cardMaxElevation="12dp"
+        app:cardCornerRadius="25dp"
         app:cardPreventCornerOverlap="true">
 
         <ImageView
@@ -77,7 +114,7 @@
         android:text="CHALLENGES"
         android:textStyle="bold"
         android:layout_marginBottom="25dp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="25sp"
         android:layout_marginStart="30dp"/>
     <androidx.cardview.widget.CardView
@@ -90,6 +127,7 @@
         app:cardBackgroundColor="@color/white"
         app:cardElevation="10dp"
         app:cardMaxElevation="12dp"
+        app:cardCornerRadius="25dp"
         app:cardPreventCornerOverlap="true">
         <ImageView
             android:id="@+id/flag"
@@ -124,6 +162,7 @@
         app:cardBackgroundColor="@color/white"
         app:cardElevation="10dp"
         app:cardMaxElevation="12dp"
+        app:cardCornerRadius="25dp"
         app:cardPreventCornerOverlap="true">
         <ImageView
             android:layout_width="fill_parent"
@@ -148,7 +187,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="BEGINNER"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:layout_marginTop="15dp"
         android:textStyle="bold"
         android:layout_marginBottom="25dp"
@@ -180,6 +219,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="15dp"
             android:text="ABS BEGINNER"
+            android:textColor="@color/white"
             android:fontFamily="sans-serif"
             android:textSize="15sp"
             android:textStyle="bold"/>
@@ -324,7 +364,7 @@
     android:layout_marginTop="15dp"
     android:layout_marginBottom="25dp"
     android:textStyle="bold"
-    android:textColor="@color/white"
+    android:textColor="@color/black"
     android:textSize="25sp"
     android:layout_marginStart="30dp"/>
 
@@ -354,6 +394,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="15dp"
             android:text="ABS INTERMEDIATE"
+            android:textColor="@color/white"
             android:fontFamily="sans-serif"
             android:textSize="15sp"
             android:textStyle="bold"/>
@@ -385,6 +426,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="15dp"
             android:text="CHEST INTERMEDIATE"
+            android:textColor="@color/white"
             android:fontFamily="sans-serif"
             android:textSize="15sp"
             android:textStyle="bold"/>
@@ -448,6 +490,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="15dp"
             android:text="LEGS INTERMIDAITE"
+            android:textColor="@color/white"
             android:fontFamily="sans-serif"
             android:textSize="15sp"
             android:textStyle="bold"/>
@@ -490,7 +533,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ADVANCED"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="25dp"
         android:textStyle="bold"
@@ -588,6 +631,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="15dp"
             android:text="ARM ADVANCED"
+            android:textColor="@color/white"
             android:fontFamily="sans-serif"
             android:textSize="15sp"
             android:textStyle="bold"/>
@@ -620,6 +664,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="15dp"
             android:text="LEGS ADVANCED"
+            android:textColor="@color/white"
             android:fontFamily="sans-serif"
             android:textSize="15sp"
             android:textStyle="bold"/>
@@ -655,19 +700,6 @@
             android:textStyle="bold" />
 
     </androidx.cardview.widget.CardView>
-
-    <Button
-        android:id="@+id/signout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/white"
-        android:text="Sign Out"
-        android:elevation="10dp"
-        android:textSize="20sp"
-        android:layout_gravity="center"
-        android:textColor="@color/black"
-        android:layout_margin="10dp"
-        android:textStyle="bold"/>
 
     </LinearLayout>
 

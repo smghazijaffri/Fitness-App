@@ -7,13 +7,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
 public class home extends AppCompatActivity {
     CardView FBody, LBody, ABegin, CBegin, ArmBegin, LBegin, SBegin, AbsInter, ChestInter, ArmInter, LegsInter, ShoulderInter, AbsAdv, ChestAdv, ArmAdv, LegsAdv, ShoulderAdv, Pedometer;
-    Button SignOut;
+    TextView SignOut;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
