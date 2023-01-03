@@ -24,6 +24,7 @@
             app:cardBackgroundColor="#1A677A"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
+            app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="true">
             <ImageView
                 android:id="@+id/flag"
@@ -52,6 +53,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
+            app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="true">
 
             <VideoView
@@ -90,6 +92,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
+            app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="true">
 
             <VideoView
@@ -129,6 +132,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
+            app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="true">
 
             <VideoView
@@ -168,6 +172,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
+            app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="true">
 
             <VideoView
@@ -208,6 +213,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
+            app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="true">
 
             <VideoView
@@ -248,6 +254,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
+            app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="true">
 
             <VideoView
@@ -288,6 +295,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
+            app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="true">
 
             <VideoView
@@ -327,6 +335,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
+            app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="true">
 
             <VideoView
@@ -367,6 +376,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
+            app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="true">
 
             <VideoView
@@ -397,8 +407,6 @@
 
         </androidx.cardview.widget.CardView>
 
-
-
         <androidx.cardview.widget.CardView
             android:id="@+id/cobracard"
             android:layout_width="match_parent"
@@ -409,6 +417,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
+            app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="true">
 
             <VideoView

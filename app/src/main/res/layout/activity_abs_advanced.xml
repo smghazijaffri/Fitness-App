@@ -25,6 +25,7 @@
             app:cardBackgroundColor="#FFFFFF"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
+            app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="true">
 
             <ImageView
@@ -53,6 +54,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
+            app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="true">
 
             <VideoView
@@ -91,6 +93,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
+            app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="true">
 
             <VideoView
@@ -131,6 +134,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
+            app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="true">
 
             <VideoView
@@ -170,6 +174,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
+            app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="true">
 
             <ImageView
@@ -210,6 +215,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
+            app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="true">
 
             <VideoView
@@ -250,6 +256,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
+            app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="true">
 
             <VideoView
@@ -289,6 +296,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
+            app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="true">
 
             <ImageView
@@ -330,6 +338,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
+            app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="true">
 
             <VideoView
@@ -370,6 +379,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
+            app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="true">
 
             <VideoView
@@ -409,6 +419,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
+            app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="true">
 
             <ImageView
@@ -449,6 +460,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
+            app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="true">
 
             <VideoView
@@ -489,6 +501,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
+            app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="true">
 
             <VideoView
@@ -528,6 +541,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
+            app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="true">
 
             <ImageView
@@ -568,6 +582,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
+            app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="true">
 
             <VideoView
@@ -608,6 +623,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
+            app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="true">
 
             <ImageView
@@ -648,6 +664,7 @@
             app:cardBackgroundColor="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="12dp"
+            app:cardCornerRadius="25dp"
             app:cardPreventCornerOverlap="true">
 
             <ImageView

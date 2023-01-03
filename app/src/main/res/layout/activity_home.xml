@@ -63,7 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="FITNESS APP"
-            android:textStyle="bold"
+            android:textStyle="bold|italic"
             android:fontFamily="sans-serif"
             android:layout_gravity= "center|bottom"
             android:textColor="@color/black"
@@ -112,7 +112,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CHALLENGES"
-        android:textStyle="bold"
+        android:textStyle="bold|italic"
         android:layout_marginBottom="25dp"
         android:textColor="@color/black"
         android:textSize="25sp"
@@ -189,7 +189,7 @@
         android:text="BEGINNER"
         android:textColor="@color/black"
         android:layout_marginTop="15dp"
-        android:textStyle="bold"
+        android:textStyle="bold|italic"
         android:layout_marginBottom="25dp"
         android:textSize="25sp"
         android:layout_marginStart="30dp"/>
@@ -203,6 +203,7 @@
         app:cardBackgroundColor="@color/white"
         app:cardElevation="10dp"
         app:cardMaxElevation="12dp"
+        app:cardCornerRadius="25dp"
         app:cardPreventCornerOverlap="true">
         <ImageView
 
@@ -235,6 +236,7 @@
         app:cardBackgroundColor="@color/white"
         app:cardElevation="10dp"
         app:cardMaxElevation="12dp"
+        app:cardCornerRadius="25dp"
         app:cardPreventCornerOverlap="true">
         <ImageView
 
@@ -268,6 +270,7 @@
         app:cardBackgroundColor="@color/white"
         app:cardElevation="10dp"
         app:cardMaxElevation="12dp"
+        app:cardCornerRadius="25dp"
         app:cardPreventCornerOverlap="true">
 
         <ImageView
@@ -302,6 +305,7 @@
         app:cardBackgroundColor="@color/white"
         app:cardElevation="10dp"
         app:cardMaxElevation="12dp"
+        app:cardCornerRadius="25dp"
         app:cardPreventCornerOverlap="true">
         <ImageView
 
@@ -334,6 +338,7 @@
     app:cardBackgroundColor="@color/white"
     app:cardElevation="10dp"
     app:cardMaxElevation="12dp"
+    app:cardCornerRadius="25dp"
     app:cardPreventCornerOverlap="true">
     <ImageView
 
@@ -363,7 +368,7 @@
     android:text="INTERMEDIATE"
     android:layout_marginTop="15dp"
     android:layout_marginBottom="25dp"
-    android:textStyle="bold"
+    android:textStyle="bold|italic"
     android:textColor="@color/black"
     android:textSize="25sp"
     android:layout_marginStart="30dp"/>
@@ -378,6 +383,7 @@
         app:cardBackgroundColor="@color/white"
         app:cardElevation="10dp"
         app:cardMaxElevation="12dp"
+        app:cardCornerRadius="25dp"
         app:cardPreventCornerOverlap="true">
         <ImageView
 
@@ -410,6 +416,7 @@
         app:cardBackgroundColor="@color/white"
         app:cardElevation="10dp"
         app:cardMaxElevation="12dp"
+        app:cardCornerRadius="25dp"
         app:cardPreventCornerOverlap="true">
         <ImageView
 
@@ -443,6 +450,7 @@
         app:cardBackgroundColor="@color/white"
         app:cardElevation="10dp"
         app:cardMaxElevation="12dp"
+        app:cardCornerRadius="25dp"
         app:cardPreventCornerOverlap="true">
         <ImageView
 
@@ -476,6 +484,7 @@
         app:cardBackgroundColor="@color/white"
         app:cardElevation="10dp"
         app:cardMaxElevation="12dp"
+        app:cardCornerRadius="25dp"
         app:cardPreventCornerOverlap="true">
         <ImageView
             android:layout_width="fill_parent"
@@ -496,7 +505,8 @@
             android:textStyle="bold"/>
 
 
-    </androidx.cardview.widget.CardView><androidx.cardview.widget.CardView
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
         android:id="@+id/shoulderinter"
         android:layout_width="300dp"
         android:layout_height="80dp"
@@ -506,6 +516,7 @@
         app:cardBackgroundColor="@color/white"
         app:cardElevation="10dp"
         app:cardMaxElevation="12dp"
+        app:cardCornerRadius="25dp"
         app:cardPreventCornerOverlap="true">
         <ImageView
 
@@ -536,7 +547,7 @@
         android:textColor="@color/black"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="25dp"
-        android:textStyle="bold"
+        android:textStyle="bold|italic"
         android:textSize="25sp"
         android:layout_marginStart="30dp"/>
     <androidx.cardview.widget.CardView
@@ -549,6 +560,7 @@
         app:cardBackgroundColor="@color/white"
         app:cardElevation="10dp"
         app:cardMaxElevation="12dp"
+        app:cardCornerRadius="25dp"
         app:cardPreventCornerOverlap="true">
         <ImageView
 
@@ -581,6 +593,7 @@
         app:cardBackgroundColor="@color/white"
         app:cardElevation="10dp"
         app:cardMaxElevation="12dp"
+        app:cardCornerRadius="25dp"
         app:cardPreventCornerOverlap="true">
 
         <ImageView
@@ -615,6 +628,7 @@
         app:cardBackgroundColor="@color/white"
         app:cardElevation="10dp"
         app:cardMaxElevation="12dp"
+        app:cardCornerRadius="25dp"
         app:cardPreventCornerOverlap="true">
         <ImageView
 
@@ -648,6 +662,7 @@
         app:cardBackgroundColor="@color/white"
         app:cardElevation="10dp"
         app:cardMaxElevation="12dp"
+        app:cardCornerRadius="25dp"
         app:cardPreventCornerOverlap="true">
         <ImageView
 
@@ -670,7 +685,8 @@
             android:textStyle="bold"/>
 
 
-    </androidx.cardview.widget.CardView><androidx.cardview.widget.CardView
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
         android:id="@+id/shoulderadv"
         android:layout_width="300dp"
         android:layout_height="80dp"
@@ -680,6 +696,7 @@
         app:cardBackgroundColor="@color/white"
         app:cardElevation="10dp"
         app:cardMaxElevation="12dp"
+        app:cardCornerRadius="25dp"
         app:cardPreventCornerOverlap="true">
         <ImageView
             android:layout_width="fill_parent"
