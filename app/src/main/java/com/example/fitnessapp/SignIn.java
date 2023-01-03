@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -27,6 +28,7 @@ public class SignIn extends AppCompatActivity {
     private FirebaseAuth Use;
     EditText Username, Password;
     Button Register, Login;
+    TextView Regi;
     private static final int REQ_ONE_TAP = 2;  // Can be any integer unique to the Activity.
     private boolean showOneTapUI = true;
     private SignInClient oneTapClient;
@@ -40,7 +42,9 @@ public class SignIn extends AppCompatActivity {
         Password = findViewById(R.id.pass);
         Login = findViewById(R.id.login);
         Register = findViewById(R.id.register);
+        Regi = findViewById(R.id.reg);
 
+        onBackPressed();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
             // User is signed in
@@ -68,12 +72,18 @@ public class SignIn extends AppCompatActivity {
                 Login();
             }
         });
-        Register.setOnClickListener(new View.OnClickListener() {
+        Regi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Register();
+                Intent intent = new Intent(SignIn.this, Register.class);
+                startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        /* super.onBackPressed(); */
     }
 
     private void Login() {
@@ -101,7 +111,7 @@ public class SignIn extends AppCompatActivity {
         }
     }
 
-    private void Register() {
+    /*private void Register() {
         String Name = Username.getText().toString().trim();
         String Pass = Password.getText().toString().trim();
         if (Name.isEmpty()){
@@ -140,5 +150,5 @@ public class SignIn extends AppCompatActivity {
 
         return matcher.matches();
 
-    }
+    }*/
 }
