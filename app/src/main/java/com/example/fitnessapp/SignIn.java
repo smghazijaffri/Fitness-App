@@ -62,6 +62,7 @@ public class SignIn extends AppCompatActivity {
         Intent intent = getIntent();
         intent.getExtras();
 
+
         if(intent.hasExtra("Signed Out"))
         {
             Toast.makeText(this, "Signed Out", Toast.LENGTH_SHORT).show();

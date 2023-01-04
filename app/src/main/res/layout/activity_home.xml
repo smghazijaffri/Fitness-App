@@ -27,14 +27,6 @@
         app:cardCornerRadius="25dp"
         app:cardPreventCornerOverlap="true">
 
-        <ImageView
-            android:id="@+id/userimg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="Username"
-            android:layout_margin="10dp"
-            android:layout_gravity="start|top"
-            />
         <TextView
             android:id="@+id/username"
             android:layout_width="wrap_content"
