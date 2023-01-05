@@ -42,7 +42,6 @@ public class SignIn extends AppCompatActivity {
         Username = findViewById(R.id.user);
         Password = findViewById(R.id.pass);
         Login = findViewById(R.id.login);
-        Register = findViewById(R.id.register);
         Regi = findViewById(R.id.reg);
 
         onBackPressed();
