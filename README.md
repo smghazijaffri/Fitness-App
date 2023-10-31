@@ -1,3 +1,3 @@
 # Fitness-App
 
-Install and register to get going.
+Install and register to get going
